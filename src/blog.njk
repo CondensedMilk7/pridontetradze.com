@@ -1,0 +1,12 @@
+---
+layout: "base.njk"
+title: Blog
+---
+
+<div class="radiance-container">
+    <ul class="entries">
+        {%- for blog in collections.post | reverse -%}
+           {% include "blog-entry.njk" %} 
+        {%- endfor -%}
+    </ul>
+</div>

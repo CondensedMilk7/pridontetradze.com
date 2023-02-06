@@ -1,0 +1,72 @@
+#particles-js {
+  position: fixed;
+  height: 100vh;
+  max-width: 900px;
+  z-index: 1;
+}
+
+.blur-background {
+  z-index: 3;
+  position: relative;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.light .blur-background {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.greeting-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 0 1rem;
+  font-weight: 300;
+  max-width: 55rem;
+  margin: auto;
+  position: relative;
+  z-index: 4;
+}
+
+.my-name {
+  color: var(--green-dark);
+}
+
+.light .my-name {
+  color: var(--green-light);
+}
+
+.i-like {
+  text-align: right;
+  background: linear-gradient(
+    var(--blue-dark) 32%,
+    var(--green-dark) 60%,
+    var(--purple-dark) 78%,
+    var(--blue-dark)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.light .i-like {
+  background: linear-gradient(
+    var(--blue-light) 32%,
+    var(--green-light) 60%,
+    var(--purple-light) 78%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 650px) {
+  .greeting-container {
+    font-size: 1.5rem;
+  }
+}

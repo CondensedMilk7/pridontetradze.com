@@ -1,0 +1,26 @@
+<header class="main-header">
+  <div class="path">
+    {% if page.url === "/" %}
+    <span>/home/</span>
+    {% else %}
+    <span> {{ page.url | shorten }} </span>
+    {% endif %}
+    <span class="prompt">&gt;</span>
+    <span class="blinker">_</span>
+  </div>
+  <div class="right">
+    <nav>
+      <ul>
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link" href="/projects">Projects</a></li>
+        <li><a class="nav-link" href="/blog">Blog</a></li>
+        {# Semantically should not be here, but whatever #}
+        <li>
+          <button id="theme-switch">
+            <img id="theme-icon" src="/assets/icons/dark.svg" alt="dark mode">
+          </button>    
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
