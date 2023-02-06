@@ -208,6 +208,17 @@ a:hover {
   box-shadow: -6px 0 4px -5px rgb(68, 139, 145);
 }
 
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
 @keyframes radiance {
   0% {
     background-position: 0% 0%;
@@ -246,5 +257,9 @@ a:hover {
 
   .projects-section {
     background-position: 100% 40%;
+  }
+
+  .not-found-container img {
+    width: 90%;
   }
 }
