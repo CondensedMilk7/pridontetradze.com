@@ -133,8 +133,8 @@ a:hover {
   min-height: 100vh;
   background: radial-gradient(
     farthest-corner at 100% 100%,
-    rgba(42, 21, 74, 0.64) 22%,
-    rgba(42, 20, 74, 0.459) 32%,
+    rgba(42, 21, 74, 0.6) 22%,
+    rgba(42, 20, 74, 0.45) 32%,
     var(--bg-dark) 60%
   );
   background-size: 200%;
@@ -146,8 +146,8 @@ a:hover {
 .light .radiance-container {
   background: radial-gradient(
     farthest-corner at 100% 100%,
-    rgba(20, 21, 45, 0.733) 22%,
-    rgba(20, 74, 45, 0.309) 32%,
+    rgba(20, 74, 45, 0.6) 22%,
+    rgba(20, 74, 45, 0.3) 32%,
     var(--bg-light) 60%
   );
   background-size: 200%;
