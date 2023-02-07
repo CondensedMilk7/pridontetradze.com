@@ -66,7 +66,7 @@ a:hover {
   left: 0;
   z-index: 10;
   /* background-color: inherit; */
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -169,7 +169,7 @@ a:hover {
   background-attachment: fixed;
 }
 
-.angular {
+/* .angular {
   background-image: url(/assets/images/angular.png);
 }
 
@@ -179,7 +179,7 @@ a:hover {
 
 .psych {
   background-image: url(/assets/images/primordial-soup.png);
-}
+} */
 
 .entry {
   margin-top: 5rem;
