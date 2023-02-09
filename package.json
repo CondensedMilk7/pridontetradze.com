@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "prev:blog": "canpress ./src/blog/flexbox-guide.md -l -t ./preview/templates/blog.html -o ./preview/output/preview.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
-    "@11ty/eleventy-plugin-rss": "^1.2.0"
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "canpress": "^0.1.0"
   }
 }

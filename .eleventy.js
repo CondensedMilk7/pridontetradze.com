@@ -1,5 +1,7 @@
 const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const markdownIt = require("markdown-it");
+const CanPress = require("canpress");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/styles");
@@ -22,6 +24,10 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  const canpress = new CanPress({});
+
+  eleventyConfig.setLibrary("md", canpress.markdownIt);
 
   return {
     dir: {

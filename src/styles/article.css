@@ -12,6 +12,7 @@ article {
   max-width: 850px;
   padding: 2rem 3vmin;
   text-align: justify;
+  line-height: 1.5rem;
 }
 
 article .main-title {
@@ -28,12 +29,11 @@ article h3 {
 
 article p {
   margin: 1rem 0;
-  line-height: 1.4rem;
 }
 
 article ul {
-  list-style-position: inside;
   text-align: left;
+  padding-left: 1rem;
 }
 
 article ul li {
@@ -41,7 +41,8 @@ article ul li {
 }
 
 article img {
-  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
 }
 
 pre {

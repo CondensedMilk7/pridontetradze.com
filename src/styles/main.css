@@ -23,6 +23,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 4rem;
+}
+
 body {
   font-family: "JetBrains Mono", "Noto Sans Georgian", monospace;
   background-color: var(--bg-dark);
@@ -42,6 +46,16 @@ body.light {
 a {
   color: var(--blue-dark);
   transition: color 200ms ease;
+}
+
+article h1 a,
+article h2 a,
+article h3 a,
+.light article h1 a,
+.light article h2 a,
+.light article h3 a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .light a {
@@ -244,6 +258,9 @@ a:hover {
 }
 
 @media (max-width: 650px) {
+  html {
+    scroll-padding-top: 6rem;
+  }
   body {
     font-size: 14px;
   }
