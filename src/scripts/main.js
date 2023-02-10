@@ -31,6 +31,9 @@ function themeSwitch() {
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
   const currentTheme = localStorage.getItem("theme") || prefersDarkScheme;
 
+  // TODO: Make utterances switch theme
+  // const comments = document.querySelector("#comments-section");
+
   if (currentTheme === "light") {
     setTheme("light");
   } else {
