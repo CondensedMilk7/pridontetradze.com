@@ -203,7 +203,7 @@ a:hover {
   padding: 1rem 0;
   padding-left: 1rem;
   border-left: 2px solid rgb(233, 160, 233);
-  box-shadow: -6px 0 4px -6px violet;
+  box-shadow: -6px 0 4px -5px violet;
   border-radius: 4px;
 }
 
