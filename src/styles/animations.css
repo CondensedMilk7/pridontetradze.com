@@ -1,0 +1,23 @@
+@keyframes radiance {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 20% 50%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}

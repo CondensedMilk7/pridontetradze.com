@@ -33,6 +33,8 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "src",
       output: "public",
+      includes: "includes/partials",
+      layouts: "includes/layouts",
     },
   };
 };
