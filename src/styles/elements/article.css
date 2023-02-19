@@ -19,6 +19,7 @@ article {
 article .main-title {
   font-size: 1.8rem;
   margin-bottom: 3rem;
+  line-height: 2.6rem;
 }
 
 article h1,
