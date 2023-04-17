@@ -36,4 +36,24 @@
   .main-footer {
     align-items: flex-start;
   }
+
+  .main-footer ul {
+    line-height: 3rem;
+  }
+
+  .main-footer ul li {
+    margin: 0;
+    height: fit-content;
+  }
+
+  .main-footer a {
+    padding: 0.85rem 0;
+  }
+}
+
+@media (max-width: 340px) {
+  .main-footer {
+    text-align: left;
+    justify-content: flex-start;
+  }
 }

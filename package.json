@@ -6,13 +6,13 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "prev:blog": "canpress ./src/blog/flexbox-guide.md -l -t ./preview/templates/blog.html -o ./preview/output/preview.html"
+    "prev:blog": "canpress -l -t ./preview/templates/blog.html -o ./preview/output/preview.html -i"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "canpress": "^0.2.0"
+    "canpress": "^0.3.0"
   }
 }
