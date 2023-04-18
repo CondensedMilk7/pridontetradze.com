@@ -14,8 +14,9 @@
 }
 
 .path .blinker {
-  animation: blink 1s steps(5, start) infinite;
-  -webkit-animation: blink 1s steps(5, start) infinite;
+  opacity: 0;
+  animation: blink 1s step-start 0s infinite;
+  -webkit-animation: blink 1s step-start 0s infinite;
 }
 
 .main-header .right {

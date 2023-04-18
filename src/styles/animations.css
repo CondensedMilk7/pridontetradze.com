@@ -11,13 +11,13 @@
 }
 
 @keyframes blink {
-  to {
-    visibility: hidden;
+  50% {
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes blink {
-  to {
-    visibility: hidden;
+  50% {
+    opacity: 1;
   }
 }

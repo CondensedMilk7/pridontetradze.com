@@ -16,10 +16,11 @@
   <meta name="description" content="{{ description }}">
   {% if "/blog" in page.url%}
     <link
+    defer
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/tokyo-night-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
-    <script>
+    <script defer>
         hljs.highlightAll();
     </script>   
   {% endif %}
