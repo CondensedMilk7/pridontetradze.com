@@ -7,7 +7,7 @@ export function headerOpaque(header) {
   }
 }
 
-export function textGlitchAnimation() {
+export async function textGlitchAnimation() {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   const elements = document.querySelectorAll(".text-glitch");

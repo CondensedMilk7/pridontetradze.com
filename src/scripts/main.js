@@ -10,10 +10,9 @@ function init() {
 
   themeSwitch();
 
-  textGlitchAnimation();
-
-  // Particle animations on home page
+  // Particle and text animations on home page
   if (location.pathname === "/") {
+    textGlitchAnimation();
     particlesJS.load("particles-js", "assets/particles.json", function () {});
   }
 }

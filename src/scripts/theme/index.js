@@ -1,5 +1,5 @@
 // Initializes color theme switch handler
-export function themeSwitch() {
+export async function themeSwitch() {
   const btn = document.querySelector("#theme-switch");
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
   const currentTheme = localStorage.getItem("theme") || prefersDarkScheme;
