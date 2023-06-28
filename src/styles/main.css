@@ -95,8 +95,8 @@ a:hover {
 .light .radiance-container {
   background: radial-gradient(
     farthest-corner at 100% 100%,
-    rgba(20, 74, 45, 0.6) 22%,
-    rgba(20, 74, 45, 0.3) 32%,
+    rgba(22, 138, 76, 0.745) 22%,
+    rgba(8, 79, 41, 0.3) 32%,
     var(--bg-light) 60%
   );
   background-size: 200%;
