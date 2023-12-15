@@ -47,7 +47,7 @@ imageAlt: "A layout of boxes in a flexbox fashoin"
 
 ![flex-direction: column](https://i.imgur.com/MWqfYZN.png)
 
-`row-reverse`-ის შემთხვევაში მთავარი ღერძი ისევ სვეტია, თუმცა იცვლება მისი დასაწყისი და დასასრული.
+`column-reverse`-ის შემთხვევაში მთავარი ღერძი ისევ სვეტია, თუმცა იცვლება მისი დასაწყისი და დასასრული.
 ახლა ნივთები განლაგდებიან ქვემოდან ზემოთ.
 
 ![flex-direction: column-reverse](https://i.imgur.com/SauQvc6.png)
