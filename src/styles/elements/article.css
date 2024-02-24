@@ -11,8 +11,8 @@ article {
   margin: auto;
   max-width: 850px;
   padding: 2rem 3vmin;
-  text-align: justify;
-  line-height: 1.5rem;
+  /* text-align: justify; */
+  line-height: 1.6rem;
   margin-bottom: 2rem;
 }
 
@@ -74,7 +74,7 @@ code {
 }
 
 .light code:not(.hljs) {
-  background-color: #a2b1b7;
+  background-color: #cbd0d1;
 }
 
 blockquote {
@@ -87,7 +87,8 @@ blockquote {
 
 .light blockquote {
   border-left: 2px solid rgb(68, 139, 145);
-  box-shadow: -6px 0 6px -5px rgb(68, 139, 145);
+  /* box-shadow: -6px 0 6px -5px rgb(68, 139, 145); */
+  box-shadow: none;
 }
 
 @media (max-width: 650px) {

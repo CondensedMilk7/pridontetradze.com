@@ -13,7 +13,7 @@
 }
 
 .light .blur-background {
-  backdrop-filter: blur(2px);
+  backdrop-filter: none;
   -webkit-backdrop-filter: blur(2px);
 }
 

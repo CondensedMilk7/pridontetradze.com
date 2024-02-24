@@ -6,19 +6,22 @@
 @import url("./animations.css");
 
 :root {
-  --bg-dark: #000;
-  --fg-dark: #fff;
+  --bg-dark: #0f0f11;
+  --fg-dark: #dfe9f3;
   --green-dark: rgb(187, 255, 202);
   --blue-dark: rgb(166, 188, 255);
   --purple-dark: rgb(202, 166, 255);
+  --gray-dark: rgb(41, 35, 49);
+  --gray-dark-lifted: rgb(87, 75, 104);
 
-  --bg-light: rgb(195, 213, 220);
-  --fg-light: rgb(2, 14, 20);
-  --green-light: rgb(177, 0, 75);
+  --bg-light: rgb(235, 232, 223);
+  --fg-light: rgb(32, 32, 30);
+  --green-light: rgb(182, 59, 110);
   --blue-light: rgb(79, 97, 149);
   --purple-light: rgb(93, 68, 131);
 
-  --bg-transition: background-color 500ms ease;
+  --bg-transition: background-color 250ms ease;
+  --scrllbar-thicc: 8px;
 }
 
 * {
@@ -88,21 +91,17 @@ a:hover {
   );
   background-size: 200%;
   background-attachment: fixed;
-  background-position: right;
-  animation: radiance 15s ease infinite;
 }
 
 .light .radiance-container {
   background: radial-gradient(
     farthest-corner at 100% 100%,
-    rgba(22, 138, 76, 0.745) 22%,
-    rgba(8, 79, 41, 0.3) 32%,
+    rgb(255, 225, 143) 22%,
+    rgba(218, 211, 118, 0.116) 32%,
     var(--bg-light) 60%
   );
   background-size: 200%;
   background-attachment: fixed;
-  background-position: right;
-  animation: radiance 15s ease infinite;
 }
 
 .entries {
@@ -132,7 +131,8 @@ a:hover {
 
 .light .entry {
   border-left: 2px solid rgb(141, 75, 146);
-  box-shadow: -6px 0 4px -5px rgb(141, 75, 146);
+  /* box-shadow: -6px 0 4px -5px rgb(141, 75, 146); */
+  box-shadow: none;
 }
 
 .entry:nth-child(even) {
@@ -142,7 +142,8 @@ a:hover {
 
 .light .entry:nth-child(even) {
   border-left: 2px solid rgb(68, 139, 145);
-  box-shadow: -6px 0 4px -5px rgb(68, 139, 145);
+  /* box-shadow: -6px 0 4px -5px rgb(68, 139, 145); */
+  box-shadow: none;
 }
 
 .not-found-container {
@@ -154,6 +155,24 @@ a:hover {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+::-webkit-scrollbar {
+  width: var(--scrllbar-thicc);
+  height: var(--scrllbar-thicc);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gray-dark-lifted);
 }
 
 @media (max-width: 650px) {
