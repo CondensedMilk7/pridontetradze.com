@@ -1,7 +1,9 @@
 const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const markdownIt = require("markdown-it");
-const CanPress = require("canpress");
+const MarkdownIt = require("markdown-it");
+const markdownItBiblatex = require("@arothuis/markdown-it-biblatex");
+const mdAnchor = require("markdown-it-anchor");
+const mdTableOfContents = require("markdown-it-table-of-contents");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/styles");
@@ -25,9 +27,29 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-  const canpress = new CanPress({});
+  md = new MarkdownIt({
+    typographer: true,
+    linkify: true,
+  });
 
-  eleventyConfig.setLibrary("md", canpress.markdownIt);
+  md.use(markdownItBiblatex, {
+    bibPath: 'src/assets/bibliography.bib',
+    bibliographyTitle: '<h2 class="bibliography-title">References</h2>',
+    wrapBibliography: true,
+    bibliographyContentsWrapper: "ul",
+    bibliographyEntryWrapper: "li"
+  });
+
+  md.use(mdAnchor, {
+    permalink: mdAnchor.permalink.headerLink(),
+  });
+
+  md.use(mdTableOfContents, {
+    containerHeaderHtml: "<h1>Table of Contents</h1>",
+    containerClass: "table-of-contents",
+  });
+
+  eleventyConfig.setLibrary("md", md);
 
   return {
     dir: {
