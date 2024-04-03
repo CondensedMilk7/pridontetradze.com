@@ -8,6 +8,11 @@ layout: "base.njk"
     </div>
     <article>
         <h1 class="main-title"> {{ title }}</h1>
+        {% if author %}
+          <div class="author">
+            <p><b>By {{ author }}</b></p>
+          </div>
+        {% endif %}
         {{ content | safe }}
     </article>
     {# utterances comment section #}
