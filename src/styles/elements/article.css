@@ -115,7 +115,8 @@ blockquote {
     color: black;
   }
 
-  article blockquote {
+  article blockquote,
+  .light article blockquote {
     border: none;
     box-shadow: none;
   }
