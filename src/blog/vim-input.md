@@ -1,5 +1,5 @@
 ---
-title: "Using Vim with non-latin input"
+title: "Using Vim With Non-Latin Input"
 description: "Use fcitx5 and rlue/vim-barbaric to automatically switch input methods back and forth as you enter and exit normal mode."
 image: "/assets/images/vim-input.webp"
 date: 2024-04-07
@@ -98,9 +98,9 @@ This is the reason why I have a separate group configured in `fcitx5-configtool`
 which only contains English.
 Alternatively, one could also write `vim-barbaric` toggle command but that's enough to give you an idea.
 I noticed that if you switch the input method in insert mode with something else that you didn't start
-with in normal mode, it acts as a cue for vim-barbaric to start working.
+with in normal mode, it acts as a cue for `vim-barbaric` to start working.
 If you switch to the input method in insert mode which was also the one you started with in normal mode,
-then vim-barbaric stops.
+then `vim-barbaric` stops.
 
 Now you can flex vim usage in every language you want.
 
