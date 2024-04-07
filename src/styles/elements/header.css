@@ -68,6 +68,16 @@
   color: var(--blue-light);
 }
 
+@media (max-width: 650px) {
+  .main-header {
+    display: block;
+  }
+
+  .main-header ul {
+    justify-content: flex-end;
+  }
+}
+
 @media print {
   .main-header {
     display: none;
