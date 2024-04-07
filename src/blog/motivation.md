@@ -3,6 +3,7 @@ title: "Don't Trust Motivation: Learning The Right Way"
 description: "As a web developer with background in psychology, who also happens to teach development, I'd like to share my insight on motivation when it comes to learning tech, or any field in that matter."
 author: "Pridon Tetradze"
 image: "/assets/images/comp.jpg"
+date: 2023-06-28
 ---
 
 ## Introduction
