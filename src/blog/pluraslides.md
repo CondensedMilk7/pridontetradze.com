@@ -72,7 +72,7 @@ The build steps are as follows:
 You can now visit the `index.html` to see all your slideshow links listed out. Clicking the link will take you to the slideshow app.
 The template for the index file is configurable, in case you don't like its bland looks.
 
-## deployment
+## Deployment
 
 Literally just link your repository to netlify and that's it.
 All the configuration is written in the included `netlify.toml` file.
