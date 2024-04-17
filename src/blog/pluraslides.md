@@ -72,6 +72,12 @@ The build steps are as follows:
 You can now visit the `index.html` to see all your slideshow links listed out. Clicking the link will take you to the slideshow app.
 The template for the index file is configurable, in case you don't like its bland looks.
 
+## deployment
+
+Literally just link your repository to netlify and that's it.
+All the configuration is written in the included `netlify.toml` file.
+The `_redirects` file generated in the `dist` folder also delegates all the routing tasks to the slideshow apps.
+
 ## Some Caveats
 
 It isn't to say that I am not satisfied with this solution,
@@ -86,12 +92,6 @@ This makes the build process slow.
 The built files are separate Vue apps with separate assets and bundles,
 even though most of it is the same between slideshows.
 This means that the bundle size is unnecessarily large.
-
-## deployment
-
-Literally just link your repository to netlify and that's it.
-All the configuration is written in the included `netlify.toml` file.
-The `_redirects` file generated in the `dist` folder also delegates all the routing tasks to the slideshow apps.
 
 ## Concluding Notes
 
