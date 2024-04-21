@@ -5,6 +5,9 @@ image: https://img.youtube.com/vi/TaV06HLwR0E/maxresdefault.jpg
 imageAlt: Image of Angular and Firebase logo
 language: geo
 description: ხშირ შემთხვევაში ფრონტენდ აპლიკაცია პროექტის მხოლოდ ნახევარია და საჭიროა სერვერი და მონაცემების ბაზა, რათა სრულფასოვანი ვებ აპლიკაცია შევქმნათ. ამ გაკვეთილში ვისწავლით, როგორ დავაკავშიროთ ჩვენი ფრონტენდ Angular აპლიკაცია REST API-სთან.
+tags:
+  - post
+  - tech
 ---
 
 ## REST API

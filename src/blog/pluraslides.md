@@ -3,6 +3,9 @@ title: "Manage Slideshows Like a Web Dev"
 description: "Build and deploy multiple slidev projects from one repository"
 date: 2024-04-17
 image: "/assets/images/slidev.webp"
+tags:
+  - post
+  - tech
 ---
 
 [Slidev](https://sli.dev) is a wonderful piece of technology that allows you to build beautiful slideshows from markdown files.

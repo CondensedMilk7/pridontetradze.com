@@ -4,6 +4,9 @@ description: "As a web developer with background in psychology, who also happens
 author: "Pridon Tetradze"
 image: "/assets/images/comp.jpg"
 date: 2023-06-28
+tags:
+  - post
+  - personal
 ---
 
 ## Introduction

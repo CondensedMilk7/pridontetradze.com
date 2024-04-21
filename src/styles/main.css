@@ -64,11 +64,13 @@ article h3 a,
   color: var(--blue-light);
 }
 
-a:hover {
+a:hover,
+a.active {
   color: var(--green-dark);
 }
 
-.light a:hover {
+.light a:hover,
+.light a.active {
   color: var(--green-light);
 }
 
@@ -99,10 +101,25 @@ a:hover {
   background-attachment: fixed;
 }
 
+.tags-list {
+  margin-top: 5rem;
+  padding: 2rem 2vmax;
+}
+
+.tags-list ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
 .entries {
   padding: 2rem 1rem 3rem 2vmax;
   list-style: none;
   max-width: 52rem;
+}
+
+.blog-posts .entries > .entry:nth-child(1) {
+  margin-top: 0;
 }
 
 .projects-section {

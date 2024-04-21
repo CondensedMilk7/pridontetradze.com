@@ -1,0 +1,20 @@
+---
+layout: "base.njk"
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+
+<div class="radiance-container">
+  <div class="blog-posts">
+  {%- include "tags-list.njk" -%}
+    <ul class="entries">
+      {% set taglist = collections[ tag ] %}
+      {% for blog in taglist | reverse %}
+        {%- include "blog-entry.njk" -%}
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -6,9 +6,12 @@ image: "/assets/images/cover.jpg"
 ---
 
 <div class="radiance-container">
+  <div class="blog-posts">
+    {%- include "tags-list.njk" -%}
     <ul class="entries">
-        {%- for blog in collections.post | reverse -%}
-           {% include "blog-entry.njk" %} 
-        {%- endfor -%}
+      {%- for blog in collections.post | reverse -%}
+         {% include "blog-entry.njk" %} 
+      {%- endfor -%}
     </ul>
+  </div>
 </div>

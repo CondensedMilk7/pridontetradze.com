@@ -4,6 +4,9 @@ description: "ვისწავლოთ ერთ-ერთი ფუნდა
 date: 2023-02-08
 image: "/assets/images/flexbox.jpg"
 imageAlt: "A layout of boxes in a flexbox fashoin"
+tags:
+  - post
+  - tech
 ---
 
 [[toc]]

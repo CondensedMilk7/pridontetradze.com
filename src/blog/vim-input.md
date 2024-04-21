@@ -3,6 +3,9 @@ title: "Using Vim With Non-Latin Input"
 description: "Use fcitx5 and rlue/vim-barbaric to automatically switch input methods back and forth as you enter and exit normal mode."
 image: "/assets/images/vim-input.webp"
 date: 2024-04-07
+tags:
+  - post
+  - tech
 ---
 
 Many native English-speaking people will fail to relate to this problem,

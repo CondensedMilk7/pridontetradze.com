@@ -5,6 +5,9 @@ image: https://img.youtube.com/vi/Ca6DID6liyo/maxresdefault.jpg
 imageAlt: Image of Linux BASH logo and title
 language: geo
 description: შელის საშუალებით გვაქვს ულევი პოტენციალი, რომლითაც კომპიუტერს შეგვიძლია გავაკეთებინოთ ზუსტად ის, რაც ჩვენ გვინდა და არ დავჯერდეთ იმ შეზღუდული ფუნქციების რეპერტუარს, რომელსაც რომელიმე გრაფიკული აპლიკაცია გვთავაზობს. მთავარი შეზღუდვა მხოლოდ ადამიანის ცოდნა და წარმოსახვაა.
+tags:
+  - post
+  - tech
 ---
 
 # Shell (გარსი)

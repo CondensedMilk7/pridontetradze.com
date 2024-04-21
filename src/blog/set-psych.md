@@ -6,10 +6,11 @@ description: Psychology of set – a field founded by Georgian psychologist
 author: Pridon Tetradze
 authorPage: https://pridontetradze.com
 date: 2022-08-27T16:53:03.214Z
-tags:
-  - article
 videoUrl: https://www.youtube.com/watch?v=cBYW_KiY19A
 image: https://i.ytimg.com/vi/cBYW_KiY19A/hq720.jpg
+tags:
+  - post
+  - academic
 ---
 
 [[toc]]
