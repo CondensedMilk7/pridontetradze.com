@@ -15,6 +15,9 @@
 
   --bg-transition: background-color 250ms ease;
   --scrllbar-thicc: 8px;
+
+  --blur-dark: blur(8px);
+  --blur-light: blur(4px);
 }
 
 * {
