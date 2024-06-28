@@ -1,4 +1,7 @@
+[build]
+  command = "bun run build"
+  publish = "public"
 [[redirects]]
-from = "/feed/"
-to = "/feed.xml"
-status = 200
+  from = "/feed/"
+  to = "/feed.xml"
+  status = 200
