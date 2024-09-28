@@ -4,6 +4,7 @@ description: "Imagine you have a large-scale application and a part of it should
 author: "Pridon Tetradze"
 image: "https://angular.dev/assets/images/ng-image.jpg"
 date: 2024-09-28
+templateEngineOverride: md
 tags:
   - post
   - tech
@@ -358,3 +359,4 @@ The useful thing about injection tokens is that we can override them in differen
 (such as unit testing, providing a new redesigned component instead of an old one, etc.).
 
 Again, you can check the [source code right here](https://github.com/CondensedMilk7/ng-facade);
+
