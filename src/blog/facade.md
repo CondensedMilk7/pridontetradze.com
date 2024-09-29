@@ -301,7 +301,7 @@ export class ComponentsService {
 Here we fetch the list of components and return a list of different objects.
 For each object in the response, we check if the token exists,
 that corresponds to the `id` field of the response object.
-The `InjectionToken.toString` actually gives us a value like `'InjectionToken NewsComponent'` and we are only interested in the second half of it.
+The `InjectionToken.toString()` actually gives us a value like `'InjectionToken NewsComponent'` and we are only interested in the second half of it.
 In the end, we have a list of objects with the component tokens and their corresponding data.
 If we cannot find a suitable token for the given component id, we filter it out so that the app doesn't break because we need to render an unknown component.
 
@@ -343,9 +343,9 @@ export class AppComponent implements OnInit {
 ```
 
 The `rendeerComponents` method loops over every component object and uses their `token` property
-to inject the data it provides with the `Injector.get` method.
+to inject the data it provides with the `Injector.get()` method.
 Remember, that (as we defined it in the tokens) this gives us a `Promise`.
-We use `Promise.then` to get a hold of the component that has been lazily loaded
+We use `Promise.then()` to get a hold of the component that has been lazily loaded
 and use the `ViewContainerRef` to render it in the host's view.
 Finally, we loop over every key that the component data object has,
 which are the expected input properties of those components, thus setting them to the necessary values.
@@ -358,5 +358,5 @@ We could make this work without the injection tokens by creating a simple config
 The useful thing about injection tokens is that we can override them in different scenarios
 (such as unit testing, providing a new redesigned component instead of an old one, etc.).
 
-Again, you can check the [source code right here](https://github.com/CondensedMilk7/ng-facade);
+Again, you can check the [source code right here](https://github.com/CondensedMilk7/ng-facade).
 
