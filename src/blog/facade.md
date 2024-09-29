@@ -302,7 +302,7 @@ Here we fetch the list of components and return a list of different objects.
 For each object in the response, we check if the token exists,
 that corresponds to the `id` field of the response object.
 The `InjectionToken.toString` actually gives us a value like `'InjectionToken NewsComponent'` and we are only interested in the second half of it.
-In the end, we have a list of objects with the token strings and their corresponding data.
+In the end, we have a list of objects with the component tokens and their corresponding data.
 If we cannot find a suitable token for the given component id, we filter it out so that the app doesn't break because we need to render an unknown component.
 
 Finally, we take this service and use it to render the components in the main component (in this case, `AppComponent`):
