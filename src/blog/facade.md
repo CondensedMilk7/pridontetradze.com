@@ -1,5 +1,5 @@
 ---
-title: "Bck-End Driven Component Facade in Angular"
+title: "Back-End Driven Component Facade in Angular"
 description: "Imagine you have a large-scale application and a part of it should render a variety of different components. All the components, their ordering, and their supplied data is coming from the back-end. What the client-side of the app decides, is to just use the schema it is being provided with to dynamically render components."
 author: "Pridon Tetradze"
 image: "https://angular.dev/assets/images/ng-image.jpg"
