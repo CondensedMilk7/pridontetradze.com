@@ -17,7 +17,8 @@ All the components, their ordering, and their supplied data is coming from the b
 What the client-side of the app decides, is to just use the schema it is being provided with to dynamically render components.
 This pattern is sometimes referred to as the facade pattern.
 
-Here's the [full code example](https://github.com/CondensedMilk7/ng-facade) in advance.
+Here's the [full code example](https://github.com/CondensedMilk7/ng-facade) in advance,
+as well as the [live stackblitz example](https://stackblitz.com/~/github.com/CondensedMilk7/ng-facade?file=src/app/app.component.ts).
 Mind you, this example is here just to give you an idea/inspiration.
 I wouldn't go around using the exact copy of this code.
 
@@ -358,5 +359,8 @@ We could make this work without the injection tokens by creating a simple config
 The useful thing about injection tokens is that we can override them in different scenarios
 (such as unit testing, providing a new redesigned component instead of an old one, etc.).
 
-Again, you can check the [source code right here](https://github.com/CondensedMilk7/ng-facade).
+Again, you can check the [source code](https://github.com/CondensedMilk7/ng-facade),
+or the [stackblitz example](https://stackblitz.com/~/github.com/CondensedMilk7/ng-facade?file=src/app/app.component.ts) to play around with it in your browser.
+
+Have fun!
 
