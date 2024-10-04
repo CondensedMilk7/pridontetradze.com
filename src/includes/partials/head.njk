@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="/styles/elements/article.css" />
     <link defer rel="stylesheet" href="/styles/highlight-theme.css">
   {% endif %}
+  {% if "/music" in page.url %}
+    <link rel="stylesheet" href="/styles/elements/music.css">
+    <script src="/wavesurfer.js" type="module"></script>
+    <script defer src="/scripts/music.js" type="module"></script>
+  {% endif %}
   <link rel="stylesheet" href="/styles/elements/header.css" />
   <link rel="stylesheet" href="/styles/elements/footer.css" />
   <link rel="stylesheet" href="/styles/animations.css" />

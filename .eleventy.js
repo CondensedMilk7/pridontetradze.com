@@ -9,8 +9,12 @@ const mdHighlightjs = require("markdown-it-highlightjs");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/styles");
   eleventyConfig.addPassthroughCopy("./src/assets");
-  eleventyConfig.addPassthroughCopy("./src/admin");
   eleventyConfig.addPassthroughCopy("./src/scripts");
+
+  // Node modules
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/wavesurfer.js/dist/wavesurfer.min.js": "wavesurfer.js"
+  })
 
   eleventyConfig.addPlugin(pluginRss);
 
