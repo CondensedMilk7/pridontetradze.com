@@ -46,6 +46,16 @@ body.light {
   color: var(--fg-light);
 }
 
+::selection {
+  background: var(--blue-dark);
+  color: var(--fg-light);
+}
+
+.light ::selection {
+  background: var(--blue-light);
+  color: var(--fg-dark);
+}
+
 a {
   color: var(--blue-dark);
   transition: color 200ms ease;
