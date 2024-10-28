@@ -343,7 +343,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-The `rendeerComponents` method loops over every component object and uses their `token` property
+The `renderComponents` method loops over every component object and uses their `token` property
 to inject the data it provides with the `Injector.get()` method.
 Remember, that (as we defined it in the tokens) this gives us a `Promise`.
 We use `Promise.then()` to get a hold of the component that has been lazily loaded
