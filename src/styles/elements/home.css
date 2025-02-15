@@ -1,7 +1,7 @@
 #particles-js {
   position: fixed;
   height: 100vh;
-  max-width: 900px;
+  width: 100vw;
   z-index: 1;
 }
 

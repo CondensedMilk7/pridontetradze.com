@@ -63,6 +63,7 @@ pre {
   box-shadow: -6px 0 6px -5px violet;
   overflow-y: hidden;
   overflow-x: auto;
+  margin: 2rem 0;
 }
 
 pre code {
@@ -76,14 +77,16 @@ pre code {
 
 code {
   font-size: 0.9rem;
-  font-family: "JetBrains Mono", "Noto Sans Georgian", monospace;
+  font-family: "DM Mono", "Noto Sans Georgian", monospace;
   background-color: #222331;
   padding: 0 4px;
   border-radius: 4px;
+  color: #ff9d8b;
 }
 
 .light code:not(.hljs) {
   background-color: #cbd0d1;
+  color: var(--fg-light);
 }
 
 blockquote {

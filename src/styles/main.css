@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  font-family: "JetBrains Mono", "Noto Sans Georgian", monospace;
+  font-family: "Open Sans", "Noto Sans Georgian", monospace;
   background-color: var(--bg-dark);
   color: var(--fg-dark);
   scroll-behavior: smooth;
