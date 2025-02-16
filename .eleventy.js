@@ -39,7 +39,8 @@ module.exports = function (eleventyConfig) {
 
   md.use(markdownItBiblatex, {
     bibPath: "src/assets/bibliography.bib",
-    bibliographyTitle: '<h2 class="bibliography-title">References</h2>',
+    bibliographyTitle:
+      '<h2 class="bibliography-title" id="references"><a class="header-anchor" href="#references">References</a></h2>',
     wrapBibliography: true,
     bibliographyContentsWrapper: "ul",
     bibliographyEntryWrapper: "li",
