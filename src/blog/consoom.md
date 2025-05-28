@@ -64,7 +64,7 @@ consumers have [a calendar of their own](https://www.youtube.com/watch?v=CgzDcw3
 Whereas Christians mark their dates with liturgical activities like prayer, fasting, and memorials -- all of this to achieve spiritual salvation --
 the consumer's calendar is full of release dates of their favorite shows, video games, upcoming concerts, tourist trips etc.
 Full of emotions, true, but devoid of spirituality.
-Friday is for some people the day of crucifixion and for some people -- black Friday, the day of great sales!
+Friday is for some people the day of crucifixion and for others -- black Friday, the day of great sales!
 For many, this is the calendar they _live by_ and _live for_.
 
 I say "consumerism invading", but has it ever not been there?
