@@ -50,6 +50,13 @@ So somehow even the practical value of a piece of software sometimes falls behin
 products and micro-products that have some kind of innate value, they arouse desire,
 just like the version label of the latest iPhone that is greater than yours by 1.
 
+I'm sure you have come across productivity posts and videos where people talk about how they stay productive.
+In reality they just talk about _what they use_ to be productive and why you should try it too.
+There is rarely any methods or techniques mentioned to uplift your productivity, no attempt to improve skills.
+What you see is basically a list of tools and commodities that promise you greater creative output.
+Essentially, it's a well-packaged productivity products catalogue.
+It's worth dedicating a separate post on how productivity itself is needlessly glorified, but let's not digress.
+
 I'm not saying we should be rigid and extremely pragmatic. We should take joy in marveling at the specific features of products,
 be it the taste of our favorite coffee brand or compilation speed of our favorite framework.
 I can understand that when it comes to small things in life.
