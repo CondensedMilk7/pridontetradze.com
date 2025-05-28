@@ -20,7 +20,7 @@ collecting things (like watches, exotic objects etc.) --
 all the types of activities that are mostly passive. The value of such activities are the products themselves.
 I'm not trying to give a moral speech to encourage people to partake in more creative and active hobbies like
 music composition or building houses. I'm simply making an observation.
-Most of us are too tired from spinning cogs in corporate machines to such things,
+Most of us are too tired from spinning cogs in corporate machines to do such things,
 and since we want to talk to people about topics outside our jobs, we settle on consumed products.
 What I have noticed is that consumerism doesn't limit itself to leisure.
 In fact, tools and commodities have become consumer products.
