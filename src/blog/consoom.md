@@ -38,7 +38,7 @@ So how come, that even when I am working, it's the same experience?
 
 During work, at least three times a week I have meetings about new AI tools that we developers are **encouraged** to use in our everyday work.
 Don't get me wrong, I use some AI tools, which are mildly convenient, but I'm told they are going to change my life.
-Every time I see someone start a new project, I don't see them designing an architecture it,
+Every time I see someone start a new project, I don't see them designing an architecture for it,
 I see them debating what latest and hottest tech stacks and UI libraries they should use.
 Instead of engaging in solving a problem, we are taking a shopping trip at a imaginary digital tech store,
 picking up and comparing different products, their prices and specifications.
