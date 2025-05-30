@@ -13,6 +13,8 @@ tags:
   - academic
 ---
 
+> This article is also available in [video format](https://www.youtube.com/watch?v=cBYW_KiY19A&t=1950s).
+
 [[toc]]
 
 # Abstract
