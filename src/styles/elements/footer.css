@@ -1,14 +1,17 @@
 .main-footer {
   position: relative;
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  flex-wrap: wrap;
   font-size: 1rem;
   padding: 3rem 1rem;
   z-index: 4;
   backdrop-filter: var(--blur-dark);
   -webkit-backdrop-filter: var(--blur-dark);
+}
+
+.main-footer .main-content {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
 }
 
 .light .main-footer {
@@ -32,6 +35,25 @@
   margin: 0.5rem 0;
 }
 
+.main-footer .bottom {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-footer .prayer {
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main-footer .cross,
+.main-footer .cross svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 @media (max-width: 650px) {
   .main-footer {
     align-items: flex-start;
@@ -48,6 +70,10 @@
 
   .main-footer a {
     padding: 0.85rem 0;
+  }
+
+  .main-footer .bottom {
+    justify-content: center;
   }
 }
 
