@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy",
-    "prev:blog": "canpress -l -t ./preview/templates/blog.html -o ./preview/output/preview.html -i"
+    "build": "eleventy"
   },
   "author": "",
   "license": "ISC",

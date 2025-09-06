@@ -5,7 +5,7 @@ const markdownItBiblatex = require("@arothuis/markdown-it-biblatex");
 const mdAnchor = require("markdown-it-anchor");
 const mdTableOfContents = require("markdown-it-table-of-contents");
 const mdHighlightjs = require("markdown-it-highlightjs");
-const linksPlugin = require('./md-plugins/links');
+const linksPlugin = require("./md-plugins/links");
 
 console.log(linksPlugin);
 
@@ -16,8 +16,8 @@ module.exports = function (eleventyConfig) {
 
   // Node modules
   eleventyConfig.addPassthroughCopy({
-    "node_modules/wavesurfer.js/dist/wavesurfer.min.js": "wavesurfer.js"
-  })
+    "node_modules/wavesurfer.js/dist/wavesurfer.min.js": "wavesurfer.js",
+  });
 
   eleventyConfig.addPlugin(pluginRss);
 
@@ -70,6 +70,7 @@ module.exports = function (eleventyConfig) {
       output: "public",
       includes: "includes/partials",
       layouts: "includes/layouts",
+      data: "data",
     },
   };
 };

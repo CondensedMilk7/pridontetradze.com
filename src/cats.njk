@@ -1,0 +1,45 @@
+---
+title: "Cat Gallery"
+layout: "base.njk"
+description: "A collection of my adorable cat pictures."
+image: "/assets/images/cover.jpg"
+---
+
+<div class="radiance-container">
+    <section class="cats-section">
+        <div class="cats-header">
+            <h1>Cat Gallery</h1>
+            <p>A collection of my adorable feline friends</p>
+        </div>
+        
+        <div class="cats-gallery">
+            {%- for cat in catGallery -%}
+                {%- if loop.index % 3 == 1 -%}
+                    {%- set sizeClass = "large" -%}
+                {%- elif loop.index % 3 == 2 -%}
+                    {%- set sizeClass = "medium" -%}
+                {%- else -%}
+                    {%- set sizeClass = "small" -%}
+                {%- endif -%}
+                <div class="cat-card {{ sizeClass }}">
+                    <div class="cat-image">
+                        <img src="{{ cat.image }}" alt="{{ cat.alt }}" loading="lazy">
+                        <div class="cat-overlay">
+                            <div class="cat-info">
+                                <h3>{{ cat.name }}</h3>
+                                <p>{{ cat.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+        
+        <div id="cat-modal" class="cat-modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <img id="modal-image" src="" alt="">
+            </div>
+        </div>
+    </section>
+</div>
