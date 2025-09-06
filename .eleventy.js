@@ -5,6 +5,9 @@ const markdownItBiblatex = require("@arothuis/markdown-it-biblatex");
 const mdAnchor = require("markdown-it-anchor");
 const mdTableOfContents = require("markdown-it-table-of-contents");
 const mdHighlightjs = require("markdown-it-highlightjs");
+const linksPlugin = require('./md-plugins/links');
+
+console.log(linksPlugin);
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/styles");
@@ -51,9 +54,11 @@ module.exports = function (eleventyConfig) {
   });
 
   md.use(mdTableOfContents, {
-    containerHeaderHtml: "<h1>Table of Contents</h1>",
+    containerHeaderHtml: "<h2>Table of Contents</h2>",
     containerClass: "table-of-contents",
   });
+
+  md.use(linksPlugin);
 
   md.use(mdHighlightjs, { auto: false });
 

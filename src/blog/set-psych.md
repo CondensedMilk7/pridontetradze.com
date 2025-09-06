@@ -17,12 +17,12 @@ tags:
 
 [[toc]]
 
-# Abstract
+## Abstract
 
 In the following work I briefly explore the general psychology of set – a field founded by Georgian psychologist Dimitri Uznadze
 who rigorously, through experimental methods offered an alternate understanding of the unconscious, in contrast to fields such as psychoanalysis. The set is understood as a general state of readiness that constitutes purposive behavior. The issue of terminology is explored, as well as the usage of terms such as “set” and “attitude” in fragmentary studies that explored the same phenomenon, but lacked the unified approach, which is one of the merits of set psychology, explaining human functioning as a whole. This merit becomes evident by exploring Charpentier’s Illusion. The factors of set formation are discussed that serve the foundation of purposive behavior. Two types of sets are distinguished in terms of their differentiated and fixed nature. Their nature is further elaborated upon discussing their interrelationship. This is followed by exploring the notion of two levels of psychic activity which is based on Uznadze’s understanding of the term “objectification” and which is integral to understanding the psychology of set as a field of general psychology.
 
-# 1 Introduction
+## 1 Introduction
 
 In 1979 the second international symposium was conducted in Tbilisi, Georgia, where psychologists all around the world gathered to share their findings about one of the most ellusive phenomena known to the field: the unconscious. 150 guests from 17 countries attended (not including hosts from Soviet Union) and considering the fact that the “Iron Curtain” was still holding strong in USSR, these numbers were quite immense [@imedadze22].
 
@@ -30,7 +30,7 @@ There were two notable things regarding this event, at least in the scope of thi
 
 What greatly distinguishes the methodology of Uznadze’s school from psychoanalysis is the experimental approach to studying the unconscious. Although it made a name for itself after the Tbilisi symposium, its popularity outside post-soviet countries somehow has receded. Despite this, the theory of set offers a favorable approach for academic psychology which dismisses the achievements of psychoanalysis due to its allegedly unscientific methodology of exploring the unconscious.
 
-# 2 Attitude or Set?
+## 2 Attitude or Set?
 
 The terminology must be addressed first and foremost, namely the distinction between the attitude and set, and which one we should use when dealing with Uznadze’s notion. This will help us to formulate a general outline, which will serve as a guide throughout this work.
 
@@ -48,7 +48,7 @@ The issue of terminology, such as using different terms to describe the same phe
 
 > A set is a psycho-physical state of readiness that arises upon a specific coincidence of individual’s need with the situation and operational capacity and which determines his or her purposive behavior.
 
-# 3 Defining Set Through Charpentier’s Illusion
+## 3 Defining Set Through Charpentier’s Illusion
 
 In 1948, Uznadze showed the merits of his set theory by explaining the phenomenon called “Charpentier’s illusion” [@murray99{see}], while also critically reviewing the existing theories surrounding the subject. Discussing where existing theories fell short and where Uznadze’s theory filled in the gaps, will help us formulate the most basic definition of set.
 
@@ -68,7 +68,7 @@ From the aforementioned experiment, it was concluded that by fixating the set in
 
 Here, a mental and neural state of readiness, of course, doesn't necessarily mean a conscious state, nor does it completely dismiss the influence of the conscious processes. At the same time, it is a state of readiness for any context, not constrained in social domain as one would expect from the term “attitude”.
 
-# 4 Set Between Big and Small Theories
+## 4 Set Between Big and Small Theories
 
 It is important to see how Uznadze’s experiments tackle the issue. The notion of set doesn't simply aim to explain a particular phenomenon like Charpentier’s illusion. It is a theory that attempts to explain the general functioning of a human being as a whole. A theory using this approach is called a big (or general) theory. This is something that was often outside of the scope of the majority of research made in the field of psychology. There has seldom been a unified theory that would explain both specific peculiarities of psychological activity and human activity as a whole. This often resulted in a vast body of contradictory theories, experiments, and correlations that seemingly led to nowhere – the issue often present in small theories that focus on explaining just one particular, isolated phenomenon.
 
@@ -88,7 +88,7 @@ Uznadze’s inspiration derived from Allport’s work on attitude and Levin’s 
 
 We could argue, that the reason other explanations of Charpentier’s illusion, as well as Wurtzburg’s research, fell short is that all of them were constructed to explain a rather too specific event. By doing so, great many aspects of human mind and behavior were simply (perhaps accidentally) ignored, rendering them inaccurate.
 
-# 5 Conditions of Set Formation
+## 5 Conditions of Set Formation
 
 Now that we are aware of the basic outline of the set, we should discuss how it comes to be. When discussing the psychic activity of a human being in relation to the environment, we assume that the behavior is purposive, i.e it serves a purpose, insofar as it is driven by inner forces, the need, that direct the actions of the individual towards the object which can gratify it. This ultimately means adapting to the environment or changing it in order to reach gratification. Changing the environment is stressed because the need on its own cannot be gratified if a particular situation is not provided, where fulfilling it is possible.
 
@@ -96,7 +96,7 @@ The _need_ and the _situation_ are what Uznadze distinguished as “the fundamen
 
 [~@nadirashvili83] provided an additional factor, _operational capacity_, which stresses an individual’s ability to perform gratifying tasks.
 
-## 5.1 Subjective Factor: Need
+### 5.1 Subjective Factor: Need
 
 The activity of a human organism can be explained on different levels. Since the psychology of set concerns itself with human activity as a whole in relation to the environment, the need is understood in its general sense, not only as instinctual, social, functional or theoretical.
 
@@ -112,7 +112,7 @@ There are two basic types of need – _substantial_ and _functional_ [@uznadze08
 
 [~@uznadze08] claims that there are more beyond the basic types of needs, such as a “purely human” _theoretical_ need. It arises when the direct act of gratification is impeded and the task at hand becomes the object of observation. In this sense, Uznadze discusses theoretical need as the development or complication of substantial need. [~@nadirashvili83] further notes that people develop certain needs based on social and cultural values. All these “higher” processes are mediated by _objectification_ which I will explain in later chapters.
 
-## 5.2 Objective Factor: Situation
+### 5.2 Objective Factor: Situation
 
 When we talk about _situation_ in set psychology, we have in mind the relevant part of the environment that makes gratification of the need possible. A need on its own can not be satisfied without the object given in the environment and the need becomes individually “defined” when it can be gratified through a certain situation.
 
@@ -122,7 +122,7 @@ While the need incorporates an impetus, the organism has no way of knowing what 
 
 Moreover, in order for the behavior to be purposive, the situation and need have to meaningfully coincide. A hungry person must be provided with food as a situation and not with, for example, kitchen utensils.
 
-## 5.3 Operational Capacity
+### 5.3 Operational Capacity
 
 > “The problem of purposive behavior implies the discovery of the mechanism that allows the individual to put all inner forces in service to this behavior.” [@nadirashvili83#p. 218]
 
@@ -130,11 +130,11 @@ An individual can conduct a behavior that doesn't lead to the gratification of h
 
 The set – the readiness to act – can only be formed with the presence of all three factors: need, situation, and operational capacity. The need on its own will not compel an individual to act if there is no objective context where gratification is possible. A situation alone cannot incite a desire as the need for it should already be present in the individual. With the need and situation the set will not arise insofar as the future behavior is imprinted as a “sketch” within it, which determines if there are right operational capacities that can cause a purposive behavior – the one that ends with gratification.
 
-# 6 Types of Set
+## 6 Types of Set
 
 Given all three factors discussed above, a set is formed that gives rise to a purposive behavior and only the latter (not the set) can actually be observed. Now we have to see how and in what forms the set is conceived.
 
-## 6.1 Fixed Set
+### 6.1 Fixed Set
 
 In chapter 3 we mentioned Uznadze’s studies, where he would _fixate_ the set in test subjects in the “experimental” phase. This was the exposure of pressure on a hand or giving subjects spherical objects on serveral occasions. This was followed by a “critical” phase, where the effects of the newly fixated set were observed. It would therefore seem that the repetitive exposure to stimuli plays a significant role in forming the set. In fact, just one or two exposures are often not enough for participants to make them perceive final equal pairs of stimuli to be different [@uznadze08].
 
@@ -154,7 +154,7 @@ Indeed, this is what happens in Uznadze’s experiments, where upon many repetit
 
 It is important to note that although the purpose of set is subject’s adaptation to reality, it is not always necessary to fully reflect the external reailty. Within the set that constitutes impulsive behavior the individual reflects objects and his behavior to an extent that is important and enough for the corresponding behavior of this set. When interacting with reality, an individual comes in contact with a vast variety of objects, each of them unique. Despite that, those objects have similarities based on which human psyche tends to simplify and categorize those objects in an assimilative manner. This ensures purposive behavior without extra psychological strain [@nadirashvili85]. This is precisely what we see in Uznadze’s experiments, where the fixed set of perceiving different objects affects the perception of same objects – an “assimilative illusion” takes place.
 
-## 6.2 Situational Set
+### 6.2 Situational Set
 
 What should we make of the set that is never retained in the subject and which simply disappears after serving its purpose as the corresponding situation never presents itself again?
 
@@ -170,7 +170,7 @@ There is no concrete general measurement on how many repetitions a set requires 
 
 In conclusion, when we speak about the formation of set, at the first stage we have a _diffused_ set which has yet to be differentiated i.e to develop a distinct form. Through the help of _repetition_ or _personal significance_ of the situation, event or stimulus, the set starts to become differentiated. It either becomes a situational set that serves its purpose one time and disappears as the situation never presents itself again, or it becomes _fixed_ as it acquires an ability to retain itself within the subject and to have readiness for actualization, provided that the subject encounters the same situation.
 
-## 6.3 Intricacies of Fixed and Situational Set
+### 6.3 Intricacies of Fixed and Situational Set
 
 There’s a complex interrelation between different sets within the individual which becomes apparent when we observe assimilative and contrast illusions that were present in experiments regarding object size. It also gives us insight on how the set disappears, allowing a new set to replace it.
 
@@ -184,13 +184,13 @@ Furthermore, it is argued that situational set organizes the structure of a disp
 
 In conclusion, we can see that human activity, in terms of set, cannot simply be explained by different sets switching places with one another, or ensuring the destruction of one on the basis of the other’s formation. The existing sets can modify each other’s structural components [@nadareishvili22{for an in-depth overview, see}].
 
-# 7 Two Levels of Activity
+## 7 Two Levels of Activity
 
 As the theory of set expanded, it became apparent that the elaborate nature of the human’s psychic activity, such as social and volitional activity, cannot simply be explained with set that arises from need and objective reality. It became necessary to explore sets that not only reflect the need and objects from external reality but also social demands and values – all of which happen on a higher level of activity [@nadirashvili85].
 
 In the early stages of the set theory, a more primitive level of human activity was considered. Later the notion of _objectification_ was introduced to distinguish two forms of sets and, in general, two levels of activities.
 
-## 7.1 The First Level
+### 7.1 The First Level
 
 On the first level, we encounter an _impulsive_ behavior. The behavior is, in this case, largely directed by set. An individual’s relation to the environment is mostly fragmented and practical – purely for the sake of “consumption”. The individual only interacts with the parts of the reality that is related to his need.
 
@@ -212,7 +212,7 @@ Objectification is a mechanism that allows the individual to once more and far t
 
 The two levels of activities are not a division between the conscious and unconscious processes, as consciousness is involved on both levels to some degree. The experience of an object, which we encapsulated as “feeling” in the chart above is what Uznadze referred to as “contents of consciousness”. It is a stream of experiences that create a foundation for future operations in behavior. These experiences, feelings, contents are, however, fragmented on the first level of activity and therefore do not direct the behavior on their own as it is the set that contains a “general strategy for behavior” [@nadirashvili85#p. 54] and gives unity to these contents of consciousness on basis of which impulsive behavior takes place.
 
-## 7.2 The Second Level
+### 7.2 The Second Level
 
 On the second level of activity an individual deals with problems that cannot be solved on the first level. Simply because such problems cannot even be noticed on a more primitive level.
 
@@ -243,7 +243,7 @@ As a side note, the formation of situational set can be now described precisely.
 
 In conclusion, what differentiates the two levels of activities is the behavior and set which constitutes it. The behavior on the first level is largely driven by the set that has its factors fully and objectively present, therefore it is impulsive. The behavior at this level is also purposive, as it ends with the gratification of need. The second level of activity becomes necessary when the impulsive behavior is impeded. The objectification allows an individual to “take a step back” and once again, albeit thoroughly, observe the cause of the impediment. Through more involved conscious processes it becomes possible to create a new set, this time with imagined factors that allows the individual to conduct deliberate behavior which serves the purpose of returning to an impulsive and purposive behavior.
 
-# 8 The Reach of Set Psychology
+## 8 The Reach of Set Psychology
 
 Uznadze’s school of set psychology became the most prominent field in USSR that studied the unconscious. Interestingly enough, it withstood the pressure of falling in line with Marxist philosophy, even though it was mostly devoid of any ideology [@imedadze22].
 

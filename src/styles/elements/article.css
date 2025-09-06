@@ -17,9 +17,7 @@ article {
 }
 
 article .main-title {
-  font-size: 1.8rem;
   margin-bottom: 3rem;
-  line-height: 2.6rem;
 }
 
 article h1,
@@ -27,6 +25,19 @@ article h2,
 article h3 {
   text-align: left;
   margin: 2rem 0;
+  line-height: 1.3em;
+}
+
+article h1 {
+  font-size: 2.4rem;
+}
+
+article h2 {
+  font-size: 1.8rem;
+}
+
+article h3 {
+  font-size: 1.5rem;
 }
 
 article .author {
@@ -54,6 +65,26 @@ article ul li {
 article img {
   max-width: 100%;
   border-radius: 8px;
+}
+
+article a.external{
+  display: inline-flex;
+  align-items: center;
+}
+
+article a.external::after {
+  background-color: currentcolor;
+  content: "\200b" " (external)";
+  content: "\200b"/" (external)";
+  display: inline-block;
+  height: 1em;
+  margin-left: .25em;
+  -webkit-mask-image: url(/assets/icons/external.svg);
+  mask-image: url(/assets/icons/external.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  vertical-align: text-center;
+  width: 1em;
 }
 
 pre {
