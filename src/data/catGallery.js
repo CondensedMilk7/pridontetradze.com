@@ -41,4 +41,16 @@ module.exports = [
     description: "I wonder what's in her mind",
     alt: "Tuta the cat",
   },
+  {
+    name: "Puka",
+    image: "https://i.imgur.com/UxreRKo.jpeg",
+    description: "So smol and eepy",
+    alt: "Puka the cat",
+  },
+  {
+    name: "Tuta",
+    image: "https://i.imgur.com/MdWf6Ud.jpeg",
+    description: "I'm Batman",
+    alt: "Tuta the cat",
+  },
 ];
