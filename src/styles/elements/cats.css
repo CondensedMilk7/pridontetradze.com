@@ -136,11 +136,13 @@
   background-color: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
   position: relative;
-  margin: 2% auto;
+  margin: auto;
   padding: 0;
   width: 90%;
   max-width: 800px;

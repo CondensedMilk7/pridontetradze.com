@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       modalImage.src = img.src;
       modalImage.alt = img.alt;
-      modal.style.display = "block";
+      modal.style.display = "flex";
       document.body.style.overflow = "hidden"; // Prevent background scrolling
     });
   });
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Close modal with Escape key
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && modal.style.display === "block") {
+    if (e.key === "Escape" && modal.style.display === "flex") {
       modal.style.display = "none";
       document.body.style.overflow = "auto";
     }
