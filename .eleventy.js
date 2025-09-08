@@ -6,6 +6,7 @@ const mdAnchor = require("markdown-it-anchor");
 const mdTableOfContents = require("markdown-it-table-of-contents");
 const mdHighlightjs = require("markdown-it-highlightjs");
 const linksPlugin = require("./md-plugins/links");
+const bibListPlugin = require("./md-plugins/bib-list.js");
 
 console.log(linksPlugin);
 
@@ -47,6 +48,7 @@ module.exports = function (eleventyConfig) {
     wrapBibliography: true,
     bibliographyContentsWrapper: "ul",
     bibliographyEntryWrapper: "li",
+    linkToBibliography: true,
   });
 
   md.use(mdAnchor, {
@@ -59,6 +61,7 @@ module.exports = function (eleventyConfig) {
   });
 
   md.use(linksPlugin);
+  md.use(bibListPlugin);
 
   md.use(mdHighlightjs, { auto: false });
 

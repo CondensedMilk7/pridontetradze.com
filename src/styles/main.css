@@ -58,27 +58,34 @@ body.light {
 
 a {
   color: var(--blue-dark);
-  transition:
-    color 200ms ease,
-    outline 200ms ease;
+  transition: color 200ms ease, outline 200ms ease;
+}
+
+li {
+  transition: outline 200ms ease;
 }
 
 button {
   transition: outline 200ms ease;
 }
 
+.focused,
 a:focus-visible,
 button:focus-visible,
+article li:focus,
+article li:focus-visible,
 h1:focus-visible,
 h2:focus-visible,
 h3:focus-visible,
 h4:focus-visible {
   outline: thick double var(--green-dark);
-  outline-radius: 2px;
 }
 
+.light .focused,
 .light a:focus-visible,
 .light button:focus-visible,
+.light article li:focus,
+.light article li:focus-visible,
 .light h1:focus-visible,
 .light h2:focus-visible,
 .light h3:focus-visible,
@@ -242,6 +249,10 @@ a.active {
 
 @media print {
   .utterances {
+    display: none;
+  }
+
+  .print-ignore {
     display: none;
   }
 }
