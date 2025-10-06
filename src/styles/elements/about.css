@@ -1,0 +1,110 @@
+.about-content {
+  margin-top: 2rem;
+  padding: 2rem 2vmax;
+  max-width: 52rem;
+  line-height: 1.6;
+}
+
+.about-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-content .subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.about-content h2 {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-content .at {
+  color: var(--purple-dark);
+}
+
+.light .about-content .at {
+  color: var(--purple-light);
+}
+
+.about-content > p {
+  margin-bottom: 1rem;
+}
+
+.about-content strong {
+  font-weight: 600;
+}
+
+/* Entry lists */
+.about-content .entries {
+  padding: 0;
+}
+
+.about-content .entry {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.about-content .entry h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-content .entry .meta {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.about-content .entry p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.about-content .entry .details {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.about-content .entry .details li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+/* Skills list */
+.about-content .skills-list {
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
+}
+
+.about-content .skills-list li {
+  margin-bottom: 0.5rem;
+}
+
+.about-content .skills-list strong {
+  color: var(--purple-dark);
+}
+
+.light .about-content .skills-list strong {
+  color: var(--purple-light);
+}
+
+@media (max-width: 650px) {
+  .about-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-content h3 {
+    font-size: 1.1rem;
+  }
+}

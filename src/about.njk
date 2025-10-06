@@ -1,0 +1,56 @@
+---
+title: about
+layout: "base.njk"
+description: "About me, my work experience, and projects."
+image: "/assets/images/cover.jpg"
+---
+
+<div class="radiance-container">
+    <div class="about-content">
+        <h2>About Me</h2>
+        <p>{{ cv.about }}</p>
+
+        <h2>Work Experience</h2>
+        <ul class="entries">
+            {% for job in cv.experience %}
+            <li class="entry">
+                <h3>{{ job.title }} <span class="at">@</span> {{ job.organization }}</h3>
+                <p class="meta">{{ job.period }} | {{ job.location }}</p>
+                <ul class="details">
+                    {% for item in job.description %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h2>Personal Projects</h2>
+        <ul class="entries">
+            {% for project in cv.projects %}
+            <li class="entry">
+                <h3><a href="{{ project.url }}" target="_blank">{{ project.name }}</a></h3>
+                <p>{{ project.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h2>Education</h2>
+        <ul class="entries">
+            {% for edu in cv.education %}
+            <li class="entry">
+                <h3>{{ edu.degree }}</h3>
+                <p class="meta">{{ edu.institution }} | {{ edu.period }}</p>
+                <p>{{ edu.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h2>Technical Skills</h2>
+        <ul class="skills-list entries">
+            {% for category, skills in cv.skills %}
+            <li class="entry"><strong>{{ category }}</strong> {{ skills }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
