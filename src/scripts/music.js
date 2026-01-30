@@ -1,3 +1,7 @@
+/*
+ * Music Player Functionality
+ */
+
 const PLAY_ICON = `<i class="fa-solid fa-play"></i>`;
 const PAUSE_ICON = `<i class="fa-solid fa-pause"></i>`;
 const containerEl = document.getElementById("music-list");

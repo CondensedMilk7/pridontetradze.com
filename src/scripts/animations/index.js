@@ -44,3 +44,5 @@ export async function textGlitchAnimation() {
     };
   });
 }
+
+export { initSineWaves } from "./sine-waves.js";

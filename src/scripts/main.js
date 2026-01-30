@@ -1,5 +1,5 @@
 import { themeSwitch } from "./theme/index.js";
-import { headerOpaque, textGlitchAnimation } from "./animations/index.js";
+import { headerOpaque, textGlitchAnimation, initSineWaves } from "./animations/index.js";
 
 function init() {
   const header = document.querySelector(".main-header");
@@ -10,10 +10,13 @@ function init() {
 
   themeSwitch();
 
-  // Particle and text animations on home page
+  // Sine waves and text animations on home page
   if (location.pathname === "/") {
     textGlitchAnimation();
-    particlesJS.load("particles-js", "assets/particles.json", function () {});
+    initSineWaves(); // Animated waves on home page
+  } else {
+    // Frozen footer waves on all other pages
+    initSineWaves({ canvasId: "footer-sine-waves-canvas", frozen: true });
   }
 }
 
