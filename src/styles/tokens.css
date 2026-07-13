@@ -54,6 +54,18 @@
   --accent: var(--green);
   --accent-contrast: var(--ink-bg);
 
+  /* ---- Syntax highlighting ------------------------------------------- */
+  /* Tuned for WCAG AA (>=4.5:1) on --panel; see highlight-theme.css. */
+  --syn-comment: #a1978a;
+  --syn-keyword: #e5a8cb;
+  --syn-function: #97b6ea;
+  --syn-string: #a2cb9d;
+  --syn-number: #e8b083;
+  --syn-class: #dcc47e;
+  --syn-builtin: #8bccc3;
+  --syn-property: #e39d92;
+  --syn-punct: #b3a999;
+
   /* ---- Typography ------------------------------------------------------ */
   --font-sans: "Hanken Grotesk", "Noto Sans Georgian", system-ui, -apple-system, sans-serif;
   --font-mono: "DM Mono", "Noto Sans Georgian", ui-monospace, monospace;
@@ -109,6 +121,17 @@
   --plum: var(--plum-base);
 
   --accent-contrast: var(--paper-bg);
+
+  /* Syntax highlighting — darker variants for AA contrast on paper --panel. */
+  --syn-comment: #6f6658;
+  --syn-keyword: #9c3a72;
+  --syn-function: #3a5a9c;
+  --syn-string: #35704a;
+  --syn-number: #a1571f;
+  --syn-class: #7e6212;
+  --syn-builtin: #226f68;
+  --syn-property: #a8402f;
+  --syn-punct: #6b6252;
 
   color-scheme: light;
 }

@@ -1,67 +1,99 @@
 /*
- * Syntax highlighting — recoloured to the muted ink/paper palette.
- * Uses the theme-resolved accent tokens so code recolours with light/dark.
+ * Syntax highlighting.
+ * Colors come from the --syn-* tokens (tokens.css), which are tuned for
+ * WCAG AA contrast (>=4.5:1) on the code panel in both light and dark themes.
+ * Roles: comment · keyword · function · string · number · class/type ·
+ * builtin · property/tag · punctuation, over the default --fg for the rest.
  */
 .hljs {
   color: var(--fg);
   background: transparent;
 }
 
+/* Comments */
 .hljs-comment,
-.hljs-quote,
-.hljs-meta {
-  color: var(--faint);
+.hljs-quote {
+  color: var(--syn-comment);
   font-style: italic;
 }
 
+/* Keywords, control flow, language-level identifiers (this/super), decorators */
 .hljs-keyword,
 .hljs-selector-tag,
-.hljs-built_in,
-.hljs-name,
-.hljs-tag,
-.hljs-subst {
-  color: var(--blue);
+.hljs-variable.language_,
+.hljs-meta .hljs-keyword,
+.hljs-doctag {
+  color: var(--syn-keyword);
 }
 
-.hljs-string,
-.hljs-attr,
-.hljs-addition,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-selector-attr,
-.hljs-selector-pseudo {
-  color: var(--green);
-}
-
-.hljs-number,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-regexp,
-.hljs-selector-id,
-.hljs-selector-class {
-  color: var(--plum);
-}
-
+/* Function & section titles */
 .hljs-title,
 .hljs-title.function_,
-.hljs-title.class_,
-.hljs-section,
-.hljs-attribute,
-.hljs-property {
-  color: var(--fg);
-  font-weight: 500;
+.hljs-section {
+  color: var(--syn-function);
 }
 
-.hljs-punctuation,
-.hljs-operator {
-  color: var(--muted);
+/* Class / type names */
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-type {
+  color: var(--syn-class);
+}
+
+/* Built-ins */
+.hljs-built_in,
+.hljs-builtin-name {
+  color: var(--syn-builtin);
+}
+
+/* Strings, regexp, escapes, additions */
+.hljs-string,
+.hljs-regexp,
+.hljs-char.escape_,
+.hljs-addition,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: var(--syn-string);
+}
+
+/* Numbers, constants, literals */
+.hljs-number,
+.hljs-literal {
+  color: var(--syn-number);
+}
+
+/* Attributes, object properties, tags, CSS selectors, symbols */
+.hljs-attr,
+.hljs-attribute,
+.hljs-property,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+  color: var(--syn-property);
+}
+
+/* Variables, parameters, substitutions — kept as body text for calm */
+.hljs-variable,
+.hljs-params,
+.hljs-subst {
+  color: var(--fg);
+}
+
+/* Meta (preprocessor, decorators), operators, punctuation, deletions */
+.hljs-meta,
+.hljs-operator,
+.hljs-punctuation {
+  color: var(--syn-punct);
 }
 
 .hljs-deletion {
-  color: #c06a63;
+  color: var(--syn-property);
 }
 
 .hljs-emphasis {
