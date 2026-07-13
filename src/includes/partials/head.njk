@@ -59,7 +59,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 
-  <script type="module" src="/scripts/main.js"></script>
+  <script>{{ "main.js" | inlineJs | safe }}</script>
 
   <meta property="og:title" content="{{ title }}">
   <meta property="og:image" content="{{ image }}">

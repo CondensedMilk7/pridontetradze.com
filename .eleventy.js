@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const CleanCSS = require("clean-css");
+const esbuild = require("esbuild");
 const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const MarkdownIt = require("markdown-it");
@@ -32,6 +33,25 @@ module.exports = function (eleventyConfig) {
     return out;
   });
   eleventyConfig.addWatchTarget("./src/styles");
+
+  // JS is bundled + minified into an inline <script> rather than shipped as a
+  // module with a separate import — see head.njk. Bundling main.js pulls in its
+  // theme/index.js import, collapsing the HTML → main.js → theme critical-path
+  // chain down to the document itself. Cached; watch the scripts dir for reloads.
+  const jsCache = new Map();
+  eleventyConfig.addFilter("inlineJs", (relPath) => {
+    if (jsCache.has(relPath)) return jsCache.get(relPath);
+    const out = esbuild.buildSync({
+      entryPoints: [path.join(__dirname, "src", "scripts", relPath)],
+      bundle: true,
+      minify: true,
+      format: "iife",
+      write: false,
+    }).outputFiles[0].text.trim();
+    jsCache.set(relPath, out);
+    return out;
+  });
+  eleventyConfig.addWatchTarget("./src/scripts");
 
   // Node modules
   eleventyConfig.addPassthroughCopy({
