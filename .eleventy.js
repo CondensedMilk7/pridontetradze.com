@@ -187,12 +187,12 @@ module.exports = function (eleventyConfig) {
   // Render a page URL as a shell-style working directory: "/" → "~",
   // "/about/" → "~/about", "/blog/facade/" → "~/blog/facade".
   eleventyConfig.addFilter("shellPath", (url) => {
-    if (!url || url === "/") return "~";
+    if (!url || url === "/") return "~/";
     const clean = String(url)
       .replace(/index\.html$/, "")
       .replace(/\.html$/, "")
       .replace(/\/+$/, "");
-    return clean ? "~" + clean : "~";
+    return clean ? "~" + clean : "~/";
   });
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
