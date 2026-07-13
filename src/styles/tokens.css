@@ -15,14 +15,12 @@
   --ink-panel: #29251e;
   --ink-fg: #e9e4da;
   --ink-muted: #9d968a;
-  --ink-faint: #6b655b;
 
   /* Paper — light mode */
   --paper-bg: #ece8e1;
   --paper-panel: #f4f1ea;
   --paper-fg: #26231d;
   --paper-muted: #6f685c;
-  --paper-faint: #948d80;
 
   /* Accent trio — base (used as-is in light mode) */
   --green-base: #4f7a5c;
@@ -39,7 +37,6 @@
   --panel: var(--ink-panel);
   --fg: var(--ink-fg);
   --muted: var(--ink-muted);
-  --faint: var(--ink-faint);
 
   /* Hairline rules and panel borders derive from the foreground ink */
   --rule: rgb(233 228 218 / 0.1);
@@ -111,7 +108,6 @@
   --panel: var(--paper-panel);
   --fg: var(--paper-fg);
   --muted: var(--paper-muted);
-  --faint: var(--paper-faint);
 
   --rule: rgb(38 35 29 / 0.12);
   --rule-strong: rgb(38 35 29 / 0.16);

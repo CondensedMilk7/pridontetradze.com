@@ -1,4 +1,6 @@
 const fs = require("fs");
+const path = require("path");
+const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const MarkdownIt = require("markdown-it");
@@ -12,9 +14,24 @@ const bibListPlugin = require("./md-plugins/bib-list.js");
 console.log(linksPlugin);
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./src/styles");
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/scripts");
+
+  // CSS is inlined into <head> (minified) rather than shipped as render-blocking
+  // <link> stylesheets — see head.njk. The filter reads each sheet from
+  // src/styles/, minifies it once (cached), and returns the string. Since these
+  // reads happen outside Eleventy's template graph, watch the styles dir so
+  // `--serve` re-renders on CSS edits.
+  const cssMinifier = new CleanCSS({});
+  const cssCache = new Map();
+  eleventyConfig.addFilter("inlineCss", (relPath) => {
+    if (cssCache.has(relPath)) return cssCache.get(relPath);
+    const full = path.join(__dirname, "src", "styles", relPath);
+    const out = cssMinifier.minify(fs.readFileSync(full, "utf-8")).styles;
+    cssCache.set(relPath, out);
+    return out;
+  });
+  eleventyConfig.addWatchTarget("./src/styles");
 
   // Node modules
   eleventyConfig.addPassthroughCopy({

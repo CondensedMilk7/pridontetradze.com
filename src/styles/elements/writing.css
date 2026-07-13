@@ -14,7 +14,7 @@
 .writing__hint {
   font-family: var(--font-mono);
   font-size: var(--fs-mono);
-  color: var(--faint);
+  color: var(--muted);
   margin-bottom: 1.75rem;
 }
 

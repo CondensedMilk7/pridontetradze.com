@@ -124,7 +124,7 @@ a:hover {
   font-weight: 500;
   letter-spacing: var(--tracking-mono);
   line-height: 1.6;
-  color: var(--faint);
+  color: var(--muted);
 }
 
 .section__body {
@@ -144,7 +144,7 @@ a:hover {
   font-weight: 500;
   letter-spacing: var(--tracking-kicker);
   text-transform: uppercase;
-  color: var(--faint);
+  color: var(--muted);
 }
 
 /* ======================================================================= */
@@ -190,7 +190,7 @@ a:hover {
 }
 
 .wordmark__place {
-  color: var(--faint);
+  color: var(--muted);
 }
 
 .site-nav {
@@ -268,7 +268,7 @@ a:hover {
   padding-block: 1.6rem;
   font-family: var(--font-mono);
   font-size: var(--fs-mono);
-  color: var(--faint);
+  color: var(--muted);
 }
 
 .prayer {
@@ -370,7 +370,7 @@ a:hover {
   font-family: var(--font-mono);
   font-size: var(--fs-mono);
   font-weight: 500;
-  color: var(--faint);
+  color: var(--muted);
 }
 
 .mobile-menu__nav a[aria-current="page"] .mobile-menu__num {
@@ -398,7 +398,7 @@ a:hover {
 .mobile-menu__links a {
   color: var(--fg);
   text-decoration: underline;
-  text-decoration-color: var(--faint);
+  text-decoration-color: var(--muted);
   text-underline-offset: 4px;
 }
 
@@ -415,7 +415,7 @@ a:hover {
   border-top: 1px solid var(--rule-strong);
   font-family: var(--font-mono);
   font-size: var(--fs-mono);
-  color: var(--faint);
+  color: var(--muted);
 }
 
 /* ======================================================================= */
@@ -570,7 +570,7 @@ code {
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--faint);
+  background: var(--muted);
 }
 
 /* ======================================================================= */

@@ -18,34 +18,36 @@
   </script>
 
   {# --- Fonts --- #}
+  {# Load Google Fonts non-render-blocking: the print media type keeps the
+     stylesheet off the critical path, then onload flips it to all. display=swap
+     paints fallback text immediately, so no new flash is introduced. #}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
-  {# --- Design tokens + base (always) --- #}
-  <link rel="stylesheet" href="/styles/tokens.css" />
-  <link rel="stylesheet" href="/styles/main.css" />
+  {# --- Design tokens + base (always), inlined + minified to avoid render-blocking requests --- #}
+  <style>{{ "tokens.css" | inlineCss | safe }}{{ "main.css" | inlineCss | safe }}</style>
 
-  {# --- Page-specific styles --- #}
+  {# --- Page-specific styles (inlined) --- #}
   {% if page.url === "/" %}
-    <link rel="stylesheet" href="/styles/elements/home.css" />
+    <style>{{ "elements/home.css" | inlineCss | safe }}</style>
   {% endif %}
   {% if "/about" in page.url %}
-    <link rel="stylesheet" href="/styles/elements/about.css" />
+    <style>{{ "elements/about.css" | inlineCss | safe }}</style>
   {% endif %}
   {% if page.url === "/blog/" or "/tags/" in page.url %}
-    <link rel="stylesheet" href="/styles/elements/writing.css" />
+    <style>{{ "elements/writing.css" | inlineCss | safe }}</style>
   {% endif %}
   {% if "/blog/" in page.url and page.url !== "/blog/" %}
-    <link rel="stylesheet" href="/styles/elements/article.css" />
-    <link rel="stylesheet" href="/styles/highlight-theme.css" />
+    <style>{{ "elements/article.css" | inlineCss | safe }}{{ "highlight-theme.css" | inlineCss | safe }}</style>
   {% endif %}
   {% if "/cats" in page.url %}
-    <link rel="stylesheet" href="/styles/elements/cats.css" />
+    <style>{{ "elements/cats.css" | inlineCss | safe }}</style>
     <script defer src="/scripts/cats.js"></script>
   {% endif %}
   {% if "/music" in page.url %}
-    <link rel="stylesheet" href="/styles/elements/music.css" />
+    <style>{{ "elements/music.css" | inlineCss | safe }}</style>
     <script src="https://kit.fontawesome.com/5e50b52fe3.js" crossorigin="anonymous"></script>
     <script src="/wavesurfer.js" type="module"></script>
     <script defer src="/scripts/music.js" type="module"></script>

@@ -8,7 +8,7 @@
   font-weight: 500;
   letter-spacing: var(--tracking-mono);
   line-height: 1.6;
-  color: var(--faint);
+  color: var(--muted);
   text-transform: lowercase;
   margin: 0;
 }
@@ -226,7 +226,7 @@
   font-weight: 500;
   letter-spacing: var(--tracking-kicker);
   text-transform: uppercase;
-  color: var(--faint);
+  color: var(--muted);
 }
 
 .table-of-contents ul {

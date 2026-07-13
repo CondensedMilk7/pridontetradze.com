@@ -63,7 +63,7 @@
 .work__num {
   font-family: var(--font-mono);
   font-size: var(--fs-mono);
-  color: var(--faint);
+  color: var(--muted);
 }
 
 .work__name {
@@ -98,7 +98,7 @@
 .findme a {
   color: var(--fg);
   text-decoration: underline;
-  text-decoration-color: var(--faint);
+  text-decoration-color: var(--muted);
   text-underline-offset: 4px;
 }
 
