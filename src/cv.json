@@ -16,9 +16,8 @@
       "location": "Tbilisi, Georgia",
       "description": [
         "Lead a team of developers in building and maintaining the eToro platform.",
-        "Collaborated with other teams to deliver features and fix bugs.",
         "Planned and executed the development of several successful A/B tests that became integral parts of the platform, such as: Comparison charts, user page video bio system, trading notifications, etc.",
-        "Maintained and improved the eToro Watchlist which was under our ownership."
+        "Architected and developed new eToro marketing website client-side infrastructure for AI-driven development and content-management. Built the CMS rendering engine, enforced clear module boundaries, implemented generators for managing UI blocks and primitives with a schema-first approach."
       ]
     },
     {

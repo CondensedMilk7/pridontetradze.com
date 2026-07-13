@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include "head.njk" %}
-  <body>
-    {% include "svg.njk" %}
+  {%- set accentClass = "" -%}
+  {%- if tags -%}
+    {%- if "academic" in tags -%}{%- set accentClass = "theme-academic" -%}
+    {%- elif "personal" in tags -%}{%- set accentClass = "theme-personal" -%}
+    {%- else -%}{%- set accentClass = "theme-tech" -%}
+    {%- endif -%}
+  {%- endif -%}
+  <body class="{{ accentClass }}{% if bodyClass %} {{ bodyClass }}{% endif %}">
     {% include "header.njk" %}
     <main>
       {{ content | safe }}

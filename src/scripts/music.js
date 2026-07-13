@@ -42,14 +42,17 @@ class MusicTrack {
   }
 
   initWavesurfer() {
+    const styles = getComputedStyle(document.body);
     this.wavesurfer = WaveSurfer.create({
       container: this.waveElement,
-      waveColor: "#4F4A85",
-      progressColor: "#383351",
-      cursorColor: "currentColor",
+      waveColor: styles.getPropertyValue("--faint").trim() || "#9d968a",
+      progressColor: styles.getPropertyValue("--accent").trim() || "#4f7a5c",
+      cursorColor: styles.getPropertyValue("--fg").trim() || "#e9e4da",
       url: "/assets/music/" + this.file,
-      barWidth: 4,
-      cursorWidth: 2,
+      barWidth: 3,
+      barGap: 2,
+      barRadius: 2,
+      cursorWidth: 1,
     });
   }
 

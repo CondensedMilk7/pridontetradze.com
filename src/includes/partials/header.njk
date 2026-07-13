@@ -1,28 +1,62 @@
-<header class="main-header">
-  <div class="path">
-    {% if page.url === "/" %}
-    <span>/home/</span>
-    {% else %}
-    <span> {{ page.url | shorten }} </span>
-    {% endif %}
-    <span class="prompt">&gt;</span>
-    <span class="blinker">_</span>
-  </div>
-  <div class="right">
-    <nav>
-      <ul>
-        <li><a class="nav-link" href="/">Home</a></li>
-        <li><a class="nav-link" href="/about">About</a></li>
-        <li><a class="nav-link" href="/blog">Blog</a></li>
-        {# Semantically should not be here, but whatever #}
-        <li>
-          <button id="theme-switch" aria-label="color theme switch">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path fill="#fff" stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-            </svg>
-          </button>    
-        </li>
-      </ul>
+<header class="site-header">
+  <div class="site-header__inner container">
+    <a class="wordmark" href="/">
+      <span class="wordmark__dot" aria-hidden="true"></span>
+      <span>Pridon's corner <span class="wordmark__place">· {{ page.url | shellPath }}</span></span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a class="site-nav__link" href="/" {% if page.url === "/" %}aria-current="page"{% endif %}>home</a>
+      <a class="site-nav__link" href="/about/" {% if "/about" in page.url %}aria-current="page"{% endif %}>about</a>
+      <a class="site-nav__link" href="/blog/" {% if "/blog" in page.url or "/tags" in page.url %}aria-current="page"{% endif %}>blog</a>
+      {% include "theme-toggle.njk" %}
+      <button class="menu-toggle" id="menu-open" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </button>
     </nav>
   </div>
 </header>
+
+<dialog id="mobile-menu" class="mobile-menu" aria-label="Site menu">
+  <div class="mobile-menu__bar container">
+    <span class="wordmark">
+      <span class="wordmark__dot" aria-hidden="true"></span>
+      <span>Pridon's corner</span>
+    </span>
+    <div class="mobile-menu__actions">
+      {% include "theme-toggle.njk" %}
+      <button class="menu-toggle" id="menu-close" type="button" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-menu__nav container" aria-label="Pages">
+    <a href="/" {% if page.url === "/" %}aria-current="page"{% endif %}><span class="mobile-menu__num" aria-hidden="true">00</span>Home</a>
+    <a href="/about/" {% if "/about" in page.url %}aria-current="page"{% endif %}><span class="mobile-menu__num" aria-hidden="true">01</span>About</a>
+    <a href="/blog/" {% if "/blog" in page.url or "/tags" in page.url %}aria-current="page"{% endif %}><span class="mobile-menu__num" aria-hidden="true">02</span>Blog</a>
+    <a href="/cats/" {% if "/cats" in page.url %}aria-current="page"{% endif %}><span class="mobile-menu__num" aria-hidden="true">03</span>Cats</a>
+    <a href="/music/" {% if "/music" in page.url %}aria-current="page"{% endif %}><span class="mobile-menu__num" aria-hidden="true">04</span>Music</a>
+  </nav>
+
+  <div class="mobile-menu__find container">
+    <p class="kicker">find me</p>
+    <ul class="mobile-menu__links">
+      <li><a href="mailto:{{ cv.contact.email }}">mail</a></li>
+      <li><a href="{{ cv.contact.linkedin }}">linkedin</a></li>
+      <li><a href="{{ cv.contact.github }}">github</a></li>
+    </ul>
+  </div>
+
+  <footer class="mobile-menu__footer container">
+    <span>&copy; {% year %}</span>
+    <span class="prayer geo">
+      <span class="cross" aria-hidden="true">{%- include "cross.njk" -%}</span>
+      უფალო შეგვიწყალენ
+    </span>
+  </footer>
+</dialog>

@@ -5,52 +5,94 @@ description: "About me, my work experience, and projects."
 image: "/assets/images/cover.jpg"
 ---
 
-<div class="radiance-container">
-    <div class="about-content">
-        <h2>About Me</h2>
-        <p>{{ cv.about }}</p>
-
-        <h2>Work Experience</h2>
-        <ul class="entries">
-            {% for job in cv.experience %}
-            <li class="entry">
-                <h3>{{ job.title }} <span class="at">@</span> {{ job.organization }}</h3>
-                <p class="meta">{{ job.period }} | {{ job.location }}</p>
-                <ul class="details">
-                    {% for item in job.description %}
-                    <li>{{ item }}</li>
-                    {% endfor %}
-                </ul>
-            </li>
-            {% endfor %}
-        </ul>
-
-        <h2>Personal Projects</h2>
-        <ul class="entries">
-            {% for project in cv.projects %}
-            <li class="entry">
-                <h3><a href="{{ project.url }}" target="_blank">{{ project.name }}</a></h3>
-                <p>{{ project.description }}</p>
-            </li>
-            {% endfor %}
-        </ul>
-
-        <h2>Education</h2>
-        <ul class="entries">
-            {% for edu in cv.education %}
-            <li class="entry">
-                <h3>{{ edu.degree }}</h3>
-                <p class="meta">{{ edu.institution }} | {{ edu.period }}</p>
-                <p>{{ edu.description }}</p>
-            </li>
-            {% endfor %}
-        </ul>
-
-        <h2>Technical Skills</h2>
-        <ul class="skills-list entries">
-            {% for category, skills in cv.skills %}
-            <li class="entry"><strong>{{ category }}</strong> {{ skills }}</li>
-            {% endfor %}
-        </ul>
+<div class="ledger">
+  <section class="section">
+    <div class="section__index">— about</div>
+    <div class="section__body">
+      <h1 class="about__title">About</h1>
+      <p class="about__lead measure">
+        I build software for a living, and study humanities for leasure.
+        So I spend a lot of time thinking about both systems and the people who
+        use them.
+      </p>
+      <p class="about__note measure">
+        These days I do software development. On the side I read
+        psychoanalysis and theology, write music, go fishing and mushroom foraging.
+        This site is mostly a place to think out loud — hopefully, a small
+        treat on the internet for whoever happens to wander in.
+      </p>
     </div>
+  </section>
+
+  <section class="section">
+    <div class="section__index">01 — work</div>
+    <div class="section__body">
+      <ul class="exp">
+        {% for job in cv.experience %}
+        <li class="exp__item">
+          <h2 class="exp__title">{{ job.title }} <span class="exp__at">@ {{ job.organization }}</span></h2>
+          <p class="exp__meta">{{ job.period }} · {{ job.location }}</p>
+          <ul class="exp__points">
+            {% for item in job.description %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__index">02 — projects</div>
+    <div class="section__body">
+      <ul class="stack">
+        {% for project in cv.projects %}
+        <li class="stack__item">
+          <h3 class="stack__title"><a href="{{ project.url }}">{{ project.name }}</a></h3>
+          <p class="stack__desc measure">{{ project.description }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__index">03 — education</div>
+    <div class="section__body">
+      <ul class="stack">
+        {% for edu in cv.education %}
+        <li class="stack__item">
+          <h3 class="stack__title">{{ edu.degree }}</h3>
+          <p class="exp__meta">{{ edu.institution }} · {{ edu.period }}</p>
+          <p class="stack__desc measure">{{ edu.description }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__index">04 — skills</div>
+    <div class="section__body">
+      <dl class="skills">
+        {% for category, skills in cv.skills %}
+        <dt>{{ category }}</dt>
+        <dd>{{ skills }}</dd>
+        {% endfor %}
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__index">05 — elsewhere</div>
+    <div class="section__body">
+      <ul class="pills">
+        <li><a class="pill" href="https://primordialsoup.info">psychoanalysis</a></li>
+        <li><a class="pill" href="/cats/">cats</a></li>
+        <li><a class="pill" href="/music/">music</a></li>
+        <li><span class="pill">teaching</span></li>
+      </ul>
+    </div>
+  </section>
 </div>

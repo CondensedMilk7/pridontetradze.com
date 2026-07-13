@@ -1,75 +1,128 @@
-#sine-waves-canvas {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1;
-  pointer-events: none;
+/* Home — hero, currently, works, find-me */
+
+.hero__title {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  margin-bottom: 1.25rem;
 }
 
-.blur-background {
-  z-index: 3;
-  position: relative;
-  backdrop-filter: var(--blur-dark);
-  -webkit-backdrop-filter: var(--blur-dark);
+.hero__intro {
+  font-size: clamp(1.05rem, 2.2vw, 1.375rem);
+  line-height: 1.55;
+  color: var(--muted);
 }
 
-.light .blur-background {
-  backdrop-filter: var(--blur-light);
-  -webkit-backdrop-filter: var(--blur-light);
+.hl-green {
+  color: var(--green);
+  font-weight: 600;
+}
+.hl-blue {
+  color: var(--blue);
+  font-weight: 600;
+}
+.hl-plum {
+  color: var(--plum);
+  font-weight: 600;
 }
 
-.greeting-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  text-transform: uppercase;
-  font-size: 2rem;
-  padding: 0 1rem;
-  font-weight: 300;
-  max-width: 55rem;
-  margin: auto;
-  position: relative;
-  z-index: 4;
+/* ---- Currently ---- */
+.currently {
+  display: grid;
+  grid-template-columns: minmax(6rem, 9rem) 1fr;
+  gap: 0.65rem 2.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
 }
 
-.my-name {
-  color: var(--green-dark);
+.currently dt {
+  color: var(--muted);
 }
 
-.light .my-name {
-  color: var(--green-light);
+.currently dd {
+  color: var(--fg);
 }
 
-.i-like {
+/* ---- Works ---- */
+.works {
+  list-style: none;
+}
+
+.work {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.work:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.work__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--faint);
+}
+
+.work__name {
+  font-size: clamp(1.3rem, 2.6vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+}
+
+.work__name:hover {
+  color: var(--accent);
+}
+
+.work__tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--muted);
   text-align: right;
-  background: linear-gradient(
-    var(--blue-dark) 32%,
-    var(--green-dark) 60%,
-    var(--purple-dark) 78%,
-    var(--blue-dark)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  white-space: nowrap;
 }
 
-.light .i-like {
-  background: linear-gradient(
-    var(--blue-light) 32%,
-    var(--green-light) 60%,
-    var(--purple-light) 78%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+/* ---- Find me ---- */
+.findme {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.findme a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-color: var(--faint);
+  text-underline-offset: 4px;
+}
+
+.findme a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 @media (max-width: 650px) {
-  .greeting-container {
-    font-size: 1.5rem;
+  .work {
+    grid-template-columns: 1.75rem 1fr;
+    grid-template-areas:
+      "num name"
+      ".   tag";
+    row-gap: 0.25rem;
+  }
+  .work__num {
+    grid-area: num;
+  }
+  .work__name {
+    grid-area: name;
+  }
+  .work__tag {
+    grid-area: tag;
+    text-align: left;
   }
 }

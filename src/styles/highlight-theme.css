@@ -1,79 +1,69 @@
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em;
-}
-code.hljs {
-  padding: 3px 5px;
+/*
+ * Syntax highlighting — recoloured to the muted ink/paper palette.
+ * Uses the theme-resolved accent tokens so code recolours with light/dark.
+ */
+.hljs {
+  color: var(--fg);
+  background: transparent;
 }
 
 .hljs-comment,
-.hljs-meta {
-  color: #565f89;
-}
-.hljs-deletion,
-.hljs-doctag,
-.hljs-regexp,
-.hljs-selector-attr,
-.hljs-selector-class,
-.hljs-selector-id,
-.hljs-selector-pseudo,
-.hljs-tag,
-.hljs-template-tag,
-.hljs-variable.language_ {
-  color: #dd6999;
-}
-.hljs-link,
-.hljs-literal,
-.hljs-number,
-.hljs-params,
-.hljs-template-variable,
-.hljs-type,
-.hljs-variable {
-  color: #ff9d8b;
-}
-.hljs-attribute,
-.hljs-built_in {
-  color: #ff9d8b;
-}
-.hljs-keyword,
-.hljs-property,
-.hljs-subst,
-.hljs-title,
-.hljs-title.class_,
-.hljs-title.class_.inherited__,
-.hljs-title.function_ {
-  color: #7dcfff;
-}
-.hljs-selector-tag {
-  color: #73daca;
-}
-.hljs-addition,
-.hljs-bullet,
 .hljs-quote,
-.hljs-string,
-.hljs-symbol {
-  color: #9deaae;
+.hljs-meta {
+  color: var(--faint);
+  font-style: italic;
 }
-.hljs-code,
-.hljs-formula,
-.hljs-section {
-  color: #8097ff;
-}
-.hljs-attr,
-.hljs-char.escape_,
+
 .hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
 .hljs-name,
+.hljs-tag,
+.hljs-subst {
+  color: var(--blue);
+}
+
+.hljs-string,
+.hljs-attr,
+.hljs-addition,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: var(--green);
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-regexp,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: var(--plum);
+}
+
+.hljs-title,
+.hljs-title.function_,
+.hljs-title.class_,
+.hljs-section,
+.hljs-attribute,
+.hljs-property {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.hljs-punctuation,
 .hljs-operator {
-  color: #caa6ff;
+  color: var(--muted);
 }
-.hljs-punctuation {
-  color: #c0caf5;
+
+.hljs-deletion {
+  color: #c06a63;
 }
-.hljs {
-  background: #06000d;
-  color: #9aa5ce;
-}
+
 .hljs-emphasis {
   font-style: italic;
 }

@@ -1,110 +1,146 @@
-.about-content {
-  margin-top: 2rem;
-  padding: 2rem 2vmax;
-  max-width: 52rem;
-  line-height: 1.6;
-}
+/* About — intro, work experience, projects, education, skills, elsewhere */
 
-.about-content h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.about-content .subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-.about-content h2 {
-  font-size: 1.5rem;
-  margin-top: 3rem;
+.about__title {
+  font-size: clamp(2.25rem, 5vw, 3rem);
   margin-bottom: 1.5rem;
 }
 
-.about-content .at {
-  color: var(--purple-dark);
+.about__lead {
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  line-height: 1.4;
+  color: var(--fg);
+  margin-bottom: 1.25rem;
 }
 
-.light .about-content .at {
-  color: var(--purple-light);
+.about__note {
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
-.about-content > p {
-  margin-bottom: 1rem;
+/* ---- Work experience ---- */
+.exp {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
-.about-content strong {
-  font-weight: 600;
+.exp__item {
+  padding: 2rem 0;
+  border-top: 1px solid var(--rule);
+}
+.exp__item:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
-/* Entry lists */
-.about-content .entries {
-  padding: 0;
+/* Alternate the accent per entry: green, blue, green, ... */
+.exp__item:nth-child(odd) {
+  --entry-accent: var(--green);
+}
+.exp__item:nth-child(even) {
+  --entry-accent: var(--blue);
 }
 
-.about-content .entry {
-  margin-top: 2rem;
-  padding: 1rem;
+.exp__title {
+  font-size: clamp(1.3rem, 2.6vw, 1.6rem);
+  font-weight: 700;
 }
 
-.about-content .entry h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+.exp__at {
+  color: var(--entry-accent);
 }
 
-.about-content .entry .meta {
-  font-size: 0.95rem;
-  opacity: 0.8;
-  margin-bottom: 0.75rem;
-  font-style: italic;
+.exp__meta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--muted);
+  text-transform: lowercase;
+  margin: 0.6rem 0 1.25rem;
 }
 
-.about-content .entry p {
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
+.exp__points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: var(--measure);
 }
 
-.about-content .entry .details {
-  list-style: disc;
+.exp__points li {
+  position: relative;
   padding-left: 1.5rem;
-  margin-top: 0.75rem;
-}
-
-.about-content .entry .details li {
-  margin-bottom: 0.4rem;
   line-height: 1.5;
 }
 
-/* Skills list */
-.about-content .skills-list {
+.exp__points li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--entry-accent);
+}
+
+/* ---- Stacked entries (projects, education) ---- */
+.stack {
   list-style: none;
-  padding: 0;
-  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
 }
 
-.about-content .skills-list li {
-  margin-bottom: 0.5rem;
+.stack__item {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+}
+.stack__item:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
-.about-content .skills-list strong {
-  color: var(--purple-dark);
+.stack__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
 }
 
-.light .about-content .skills-list strong {
-  color: var(--purple-light);
+.stack__desc {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+/* ---- Skills ---- */
+.skills {
+  display: grid;
+  grid-template-columns: minmax(6rem, 9rem) 1fr;
+  gap: 0.9rem 2rem;
+  font-size: 1rem;
+}
+
+.skills dt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--accent);
+  align-self: baseline;
+  padding-top: 0.15rem;
+}
+
+.skills dd {
+  color: var(--fg);
+}
+
+/* ---- Elsewhere pills ---- */
+.pills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 @media (max-width: 650px) {
-  .about-content h1 {
-    font-size: 1.8rem;
+  .skills {
+    grid-template-columns: 1fr;
+    gap: 0.25rem 0;
   }
-
-  .about-content h2 {
-    font-size: 1.3rem;
-  }
-
-  .about-content h3 {
-    font-size: 1.1rem;
+  .skills dd {
+    margin-bottom: 0.9rem;
   }
 }

@@ -1,29 +1,31 @@
 ---
 layout: "base.njk"
 ---
+{%- set cat = tags | category -%}
+{%- set isGeo = title | hasGeorgian -%}
 
-<div class="radiance-container">
-    <div class="thumbnail-container">
-        <img src="{{ image }}" alt="{{ imageAlt }}">
-    </div>
-    <article>
-        <h1 class="main-title"> {{ title }}</h1>
-        {% if author %}
-          <div class="author">
-            <p><b>By {{ author }}</b></p>
+<div class="ledger">
+  <article>
+    <section class="section article-header">
+      <div class="section__index article__meta">
+        <a class="article__back" href="/blog/">← blog</a>
+        <span class="article__cat">{{ cat }}</span>
+        <span class="article__date">{{ page.date | postDate }}</span>
+        <span class="article__time">{{ page.inputPath | readingTime }} min{% if isGeo %} · ქა{% endif %}</span>
+      </div>
+      <div class="section__body">
+        <h1 class="article__title{% if isGeo %} geo{% endif %}">{{ title }}</h1>
+        {% if description %}
+          <p class="article__dek measure{% if isGeo %} geo{% endif %}">{{ description }}</p>
+        {% endif %}
+        {% if image %}
+          <div class="article__cover">
+            <img src="{{ image }}" alt="{{ imageAlt or title }}" loading="lazy">
           </div>
         {% endif %}
-        {{ content | safe }}
-    </article>
-    {# utterances comment section #}
-    <script
-        id="comments-section"
-        src="https://utteranc.es/client.js"
-        repo="CondensedMilk7/pridontetradze.com"
-        issue-term="title"
-        label="Comment"
-        theme="dark-blue"
-        crossorigin="anonymous"
-        async>
-    </script>
+      </div>
+    </section>
+
+    {{ content | articleLedger | safe }}
+  </article>
 </div>

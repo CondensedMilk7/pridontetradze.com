@@ -1,0 +1,126 @@
+/*
+ * Design tokens — the single source of truth for the visual system.
+ *
+ * "Quiet and techy": a warm ink/paper palette, one warm sans (Hanken Grotesk),
+ * one mono (DM Mono), and a muted accent trio (green / blue / plum).
+ *
+ * Dark ("ink") is the default theme; `:root.light` (html.light) swaps to "paper".
+ * The active accent is chosen per page/category via a `theme-*` class on <body>.
+ */
+
+:root {
+  /* ---- Raw palette ------------------------------------------------------ */
+  /* Ink — dark mode */
+  --ink-bg: #201e1b;
+  --ink-panel: #29251e;
+  --ink-fg: #e9e4da;
+  --ink-muted: #9d968a;
+  --ink-faint: #6b655b;
+
+  /* Paper — light mode */
+  --paper-bg: #ece8e1;
+  --paper-panel: #f4f1ea;
+  --paper-fg: #26231d;
+  --paper-muted: #6f685c;
+  --paper-faint: #948d80;
+
+  /* Accent trio — base (used as-is in light mode) */
+  --green-base: #4f7a5c;
+  --blue-base: #4f628f;
+  --plum-base: #7d5480;
+
+  /* Accent trio — lightened for legibility on ink */
+  --green-lift: #8dbb9b;
+  --blue-lift: #97aad8;
+  --plum-lift: #bd97c5;
+
+  /* ---- Semantic tokens (dark / ink is the default) --------------------- */
+  --bg: var(--ink-bg);
+  --panel: var(--ink-panel);
+  --fg: var(--ink-fg);
+  --muted: var(--ink-muted);
+  --faint: var(--ink-faint);
+
+  /* Hairline rules and panel borders derive from the foreground ink */
+  --rule: rgb(233 228 218 / 0.1);
+  --rule-strong: rgb(233 228 218 / 0.16);
+
+  /* Mode-adjusted accents */
+  --green: var(--green-lift);
+  --blue: var(--blue-lift);
+  --plum: var(--plum-lift);
+
+  /* Active page accent (green is the default / primary) */
+  --accent: var(--green);
+  --accent-contrast: var(--ink-bg);
+
+  /* ---- Typography ------------------------------------------------------ */
+  --font-sans: "Hanken Grotesk", "Noto Sans Georgian", system-ui, -apple-system, sans-serif;
+  --font-mono: "DM Mono", "Noto Sans Georgian", ui-monospace, monospace;
+  --font-geo: "Noto Sans Georgian", "Hanken Grotesk", sans-serif;
+
+  /* Type scale */
+  --fs-display: 2.875rem; /* 46px */
+  --fs-h1: 2.5rem; /* 40px */
+  --fs-h2: 1.75rem; /* 28px */
+  --fs-h3: 1.3rem; /* ~21px */
+  --fs-body: 1.1875rem; /* 19px */
+  --fs-small: 0.9375rem; /* 15px */
+  --fs-mono: 0.75rem; /* 12px */
+
+  --lh-tight: 1.05;
+  --lh-heading: 1.15;
+  --lh-body: 1.6;
+
+  --tracking-tight: -0.02em;
+  --tracking-mono: 0.05em;
+  --tracking-kicker: 0.14em;
+
+  /* ---- Space, radius, misc -------------------------------------------- */
+  --space-section: clamp(2rem, 4vw, 3rem); /* vertical padding of a ledger row */
+  --space-gutter: clamp(1.5rem, 3vw, 3rem); /* body padding after the vertical rule */
+  --pad-x: clamp(1.25rem, 4vw, 3rem); /* container side padding */
+  --measure: 40rem; /* comfortable reading measure */
+  --index-col: 14rem; /* width of the left "index" margin column */
+  --page-max: 78rem; /* outer content width */
+
+  --radius-card: 10px;
+  --radius-code: 8px;
+  --radius-pill: 999px;
+
+  --scrollbar: 8px;
+  --transition: 200ms ease;
+
+  color-scheme: dark;
+}
+
+:root.light {
+  --bg: var(--paper-bg);
+  --panel: var(--paper-panel);
+  --fg: var(--paper-fg);
+  --muted: var(--paper-muted);
+  --faint: var(--paper-faint);
+
+  --rule: rgb(38 35 29 / 0.12);
+  --rule-strong: rgb(38 35 29 / 0.16);
+
+  --green: var(--green-base);
+  --blue: var(--blue-base);
+  --plum: var(--plum-base);
+
+  --accent-contrast: var(--paper-bg);
+
+  color-scheme: light;
+}
+
+/* ---- Per-page accent theming ------------------------------------------- */
+/* Non-post pages default to green; posts get their category's accent. */
+body.theme-tech {
+  --accent: var(--green);
+}
+body.theme-academic {
+  --accent: var(--blue);
+}
+body.theme-personal {
+  --accent: var(--plum);
+}

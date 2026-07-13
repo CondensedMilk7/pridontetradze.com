@@ -1,17 +1,25 @@
 ---
 layout: "base.njk"
 title: Blog
-description: "Browse blog posts."
+description: "Notes on code, the mind, and the space in between."
 image: "/assets/images/cover.jpg"
 ---
 
-<div class="radiance-container">
-  <div class="blog-posts">
-    {%- include "tags-list.njk" -%}
-    <ul class="entries">
-      {%- for blog in collections.post | reverse -%}
-         {% include "blog-entry.njk" %} 
-      {%- endfor -%}
-    </ul>
-  </div>
+<div class="ledger">
+  <section class="section">
+    <div class="section__index">— writing</div>
+    <div class="section__body">
+      <h1 class="writing__title">Writing</h1>
+      <p class="writing__sub measure">
+        Notes on code, the mind, and the space in between. Mostly written to
+        think out loud.
+      </p>
+      <p class="writing__hint">↹ tab through post titles — focused headings show a ring</p>
+      {%- include "tags-list.njk" -%}
+    </div>
+  </section>
+
+  {%- for blog in collections.post | reverse -%}
+    {%- include "blog-entry.njk" -%}
+  {%- endfor -%}
 </div>

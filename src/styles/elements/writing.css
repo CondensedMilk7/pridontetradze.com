@@ -1,0 +1,78 @@
+/* Writing — blog index & tag pages */
+
+.writing__title {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.writing__sub {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.writing__hint {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--faint);
+  margin-bottom: 1.75rem;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* ---- Post entries (each is a ledger row) ---- */
+.entry__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.entry__date {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--muted);
+}
+
+.entry__title {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.65rem;
+}
+
+.entry__title a {
+  color: var(--fg);
+}
+
+.entry__title a:hover {
+  color: var(--accent);
+}
+
+.entry__desc {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
+.entry__more {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--muted);
+}
+
+.entry__more:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 650px) {
+  .entry__meta {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.85rem;
+  }
+}

@@ -1,20 +1,82 @@
 ---
 layout: "base.njk"
 title: "Home"
-description: "Web developer | Psychologist"
+description: "All about learning, creating, teaching. Mostly tech and humanities."
 image: "/assets/images/cover.jpg"
 ---
 
-<canvas id="sine-waves-canvas"></canvas>
-<div >
-  <div class="greeting-container">
-    <h1>Hi, my name is
-      <span class="my-name">Pridon</span>.</h1>
-    <h1>I like:</h1>
-    <div class="i-like">
-      <h1 class="text-glitch" data-value="learning">learning</h1>
-      <h1 class="text-glitch" data-value="creating">creating</h1>
-      <h1 class="text-glitch" data-value="teaching">teaching</h1>
+<div class="ledger">
+  <section class="section">
+    <div class="section__index">00 — hello</div>
+    <div class="section__body">
+      <h1 class="hero__title">Hi, I'm Pridon.</h1>
+      <p class="hero__intro measure">
+        I like
+        <span class="hl-green">learning</span>,
+        <span class="hl-blue">creating</span>, and
+        <span class="hl-plum">teaching</span>. I keep this corner of the
+        internet as a small treat for whoever happens to wander in.
+      </p>
     </div>
-  </div>
+  </section>
+
+  <section class="section">
+    <div class="section__index">01 — currently</div>
+    <div class="section__body">
+      <dl class="currently">
+        <dt>reading</dt>
+        <dd>Pseudo-Dionysius, again</dd>
+        <dt>building</dt>
+        <dd>stuff</dd>
+        <dt>feeding</dt>
+        <dd>three cats</dd>
+        <dt>listening</dt>
+        <dd>to Pat Metheny</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__index">02 — works</div>
+    <div class="section__body">
+      <ol class="works">
+        <li class="work">
+          <span class="work__num">01</span>
+          <a class="work__name" href="https://angular.pridontetradze.com">angular guide</a>
+          <span class="work__tag">angular · guide</span>
+        </li>
+        <li class="work">
+          <span class="work__num">02</span>
+          <a class="work__name" href="https://primordialsoup.info">primordial soup</a>
+          <span class="work__tag">essays</span>
+        </li>
+        <li class="work">
+          <span class="work__num">03</span>
+          <a class="work__name" href="/blog/">blog</a>
+          <span class="work__tag">writing</span>
+        </li>
+        <li class="work">
+          <span class="work__num">04</span>
+          <a class="work__name" href="/music/">music</a>
+          <span class="work__tag">audio</span>
+        </li>
+        <li class="work">
+          <span class="work__num">05</span>
+          <a class="work__name" href="/cats/">cat gallery</a>
+          <span class="work__tag">photos</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__index">03 — find me</div>
+    <div class="section__body">
+      <ul class="findme">
+        <li><a href="mailto:{{ cv.contact.email }}">mail</a></li>
+        <li><a href="{{ cv.contact.linkedin }}">linkedin</a></li>
+        <li><a href="{{ cv.contact.github }}">github</a></li>
+      </ul>
+    </div>
+  </section>
 </div>

@@ -1,11 +1,15 @@
-  <li class="entry">
-      <h2>
-        <a href="{{ blog.url }}">
-        {{ blog.data.title }}
-        </a>
-      </h2>
-      <p>
-        {{ blog.data.description }}
-      </p>
-      <span>{{ blog.date | postDate }}</span>
-  </li>
+{%- set cat = blog.data.tags | category -%}
+{%- set isGeo = blog.data.title | hasGeorgian -%}
+<article class="section entry">
+  <div class="section__index entry__meta">
+    <span class="entry__date">{{ blog.date | postDate }}</span>
+    <span class="cat cat--{{ cat }}">{{ cat }}{% if isGeo %} · ქა{% endif %}</span>
+  </div>
+  <div class="section__body">
+    <h2 class="entry__title{% if isGeo %} geo{% endif %}">
+      <a href="{{ blog.url }}">{{ blog.data.title }}</a>
+    </h2>
+    <p class="entry__desc measure{% if isGeo %} geo{% endif %}">{{ blog.data.description }}</p>
+    <a class="entry__more" href="{{ blog.url }}">{{ blog.inputPath | readingTime }} min →</a>
+  </div>
+</article>

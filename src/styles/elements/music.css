@@ -1,35 +1,80 @@
-.music-container {
-  margin-top: 5rem;
-  padding: 2rem 3vmin;
+/* Music — track list with wavesurfer players */
+
+.music__title {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  margin-bottom: 1rem;
 }
 
-p {
-  margin: 1rem 0;
+.music__sub {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
 }
 
-.music-container .entries {
-  padding: 0;
+.music-list {
+  list-style: none;
+}
+
+.music-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.music-entry:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.music-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.music-title h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.music-entry .date {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--muted);
+}
+
+.music-entry .player {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.music-entry .wave {
+  flex: 1;
+  min-width: 0;
 }
 
 button.play {
   all: unset;
   cursor: pointer;
-  font-size: 1.2rem;
+  flex: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 1rem;
+  transition:
+    color var(--transition),
+    border-color var(--transition);
 }
 
-.music-entry .music-title {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.music-entry .player {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.music-entry .date {
-  font-size: 0.8rem;
-  opacity: 0.7;
+button.play:hover {
+  color: var(--fg);
+  border-color: var(--muted);
 }

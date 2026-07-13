@@ -1,29 +1,9 @@
-<footer class="main-footer">
-    <canvas id="footer-sine-waves-canvas"></canvas>
-    <div class="main-content">
-        <ul>
-            <h3>Find Me</h3>
-            <li><a href="mailto:{{ cv.contact.email }}" title="My business email. Don't spam me with your make-belief SEO proposals or website improvements."><i class="fa-solid fa-envelope"></i>Mail</a></li>
-            <li><a href="{{ cv.contact.linkedin }}" title="My LinkedIn profile. Feel free to connect with me."><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
-            <li><a href="{{ cv.contact.github }}" title="My GitHub profile. Feel free to check out my projects."><i class="fa-brands fa-square-github"></i>GitHub</a></li>
-        </ul>
-        <ul>
-            <h3>Works</h3>
-            <li><a href="https://angular.pridontetradze.com"><i class="fa-brands fa-angular"></i>NG Guide</a></li>
-            <li><a href="https://primordialsoup.info"><i class="fa-solid fa-scroll"></i>Primordial Soup</a></li>
-            <li><a href="/blog"><i class="fa-solid fa-pen"></i>Blog</a></li>
-            <li><a href="/music"><i class="fa-solid fa-music"></i>Music</a></li>
-            <li><a href="/cats"><i class="fa-solid fa-cat"></i>Cat Gallery</a></li>
-        </ul>
-    </div>
-    <div class="bottom">
-        <div class="prayer">
-            <span class="cross">
-                {%- include "cross.njk" -%}
-            </span>
-            <span style="text">
-                ᲣᲤᲐᲚᲝ ᲨᲔᲒᲕᲘᲬႸᲐᲚᲔᲜ
-            </span>
-        </div>
-    </div>
+<footer class="site-footer">
+  <div class="site-footer__inner container">
+    <span>&copy; {% year %}</span>
+    <span class="prayer geo">
+      <span class="cross" aria-hidden="true">{%- include "cross.njk" -%}</span>
+      ᲣᲤᲐᲚᲝ ᲨᲔᲒᲕᲘᲬႸᲐᲚᲔᲜ
+    </span>
+  </div>
 </footer>

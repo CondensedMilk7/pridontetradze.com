@@ -1,46 +1,39 @@
-// Initializes color theme switch handler
-export async function themeSwitch() {
-  const btn = document.querySelector("#theme-switch");
-  const prefersDarkScheme = window.matchMedia(
-    "(prefers-color-scheme: dark)",
-  ).matches;
-  const preferredTheme = prefersDarkScheme ? "dark" : "light";
-  const currentTheme = localStorage.getItem("theme") || preferredTheme;
-
+/**
+ * Color theme toggle.
+ * Dark ("ink") is the default; `html.light` switches to "paper". The class
+ * lives on <html> (not <body>) so an inline <head> script can set it before
+ * the first paint — see head.njk — which avoids a flash of the wrong theme.
+ * The sun/moon icons are swapped purely with CSS (see main.css), so this
+ * only toggles the class, persists the choice, and syncs the theme-color meta.
+ */
+export function themeSwitch() {
+  const buttons = document.querySelectorAll(".theme-toggle");
   const themeMeta = document.querySelector('meta[name="theme-color"]');
-  const style = getComputedStyle(document.body);
-  const lightThemeColor = style.getPropertyValue("--bg-light");
-  const darkThemeColor = style.getPropertyValue("--bg-dark");
 
-  // TODO: Make utterances switch theme
-  // const comments = document.querySelector("#comments-section");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const saved = localStorage.getItem("theme");
+  apply(saved || (prefersDark ? "dark" : "light"));
 
-  if (currentTheme === "light") {
-    setTheme("light");
-  } else {
-    setTheme("dark");
-  }
+  buttons.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const next = document.documentElement.classList.contains("light")
+        ? "dark"
+        : "light";
+      apply(next);
+      localStorage.setItem("theme", next);
+    }),
+  );
 
-  btn.addEventListener("click", function () {
-    document.body.classList.add("bg-transition");
-    if (document.body.classList.contains("light")) {
-      setTheme("dark", true);
-    } else {
-      setTheme("light", true);
-    }
-  });
+  function apply(theme) {
+    const isLight = theme === "light";
+    document.documentElement.classList.toggle("light", isLight);
 
-  function setTheme(theme, save = false) {
-    if (theme === "light") {
-      document.body.classList.add("light");
-      themeMeta.setAttribute("content", lightThemeColor);
-    } else {
-      document.body.classList.remove("light");
-      themeMeta.setAttribute("content", darkThemeColor);
-    }
-    btn.innerHTML = document.querySelector(`#icon-${theme}`).innerHTML;
-    if (save) {
-      localStorage.setItem("theme", theme);
+    if (themeMeta) {
+      const style = getComputedStyle(document.body);
+      const color = style
+        .getPropertyValue(isLight ? "--paper-bg" : "--ink-bg")
+        .trim();
+      themeMeta.setAttribute("content", color || (isLight ? "#ece8e1" : "#201e1b"));
     }
   }
 }
