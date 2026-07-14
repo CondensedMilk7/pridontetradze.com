@@ -297,3 +297,157 @@
     margin-bottom: 0.25rem;
   }
 }
+
+@media print {
+  :root {
+    --bg: #fff !important;
+    --panel: #fff !important;
+    --fg: #000 !important;
+    --muted: #000 !important;
+    --accent: #000 !important;
+    --rule: #999 !important;
+    --rule-strong: #999 !important;
+  }
+
+  body {
+    font-family: sans-serif;
+    background: #fff;
+    color: #000;
+  }
+
+  .ledger {
+    max-width: none;
+    padding-inline: 0;
+  }
+  .ledger::before {
+    display: none;
+  }
+
+  .section {
+    display: block;
+    border-top: none;
+  }
+  .section__index,
+  .section__body {
+    padding: 0;
+  }
+
+  .article__title {
+    font-family: sans-serif;
+    font-size: 22pt;
+    margin-bottom: 0.5rem;
+  }
+  .article__dek {
+    font-family: sans-serif;
+    font-size: 13pt;
+    color: #000;
+  }
+
+  .article__meta {
+    flex-flow: row wrap;
+    gap: 0.5rem 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .article__back,
+  .article__time {
+    display: none;
+  }
+  .article__cat,
+  .article__date {
+    font-family: sans-serif;
+    color: #000;
+  }
+
+  .article__cover {
+    display: none;
+  }
+
+  .section__heading {
+    position: static;
+    font-family: sans-serif;
+    font-size: 15pt;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: normal;
+    color: #000;
+    margin: 1.5rem 0 0.5rem;
+  }
+  .section__heading::before {
+    content: none;
+  }
+  .section__eyebrow {
+    display: none;
+  }
+
+  .prose {
+    max-width: none;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  .prose :is(h1, h2, h3, h4) {
+    font-family: sans-serif;
+  }
+  .prose h3 {
+    font-size: 13pt;
+  }
+  .prose h4 {
+    font-size: 12pt;
+  }
+
+  .prose a {
+    color: #000;
+  }
+  .prose a.external::after {
+    display: none;
+  }
+
+  .prose blockquote {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: inherit;
+    color: #000;
+    border-left: 2px solid #999;
+  }
+
+  .prose pre,
+  .prose code {
+    font-family: monospace;
+  }
+  .prose pre {
+    background: none;
+    border: 1px solid #999;
+    border-radius: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .hljs,
+  .hljs * {
+    color: #000 !important;
+    background: none !important;
+  }
+
+  .prose img {
+    border: none;
+    border-radius: 0;
+  }
+
+  .table-of-contents {
+    display: none;
+  }
+  
+  .prose .citation {
+    text-decoration: none;
+  }
+
+  .section__heading,
+  .prose h3,
+  .prose h4 {
+    break-after: avoid;
+  }
+  .prose pre,
+  .prose img,
+  .prose blockquote,
+  .csl-entry {
+    break-inside: avoid;
+  }
+}
