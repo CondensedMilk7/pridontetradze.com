@@ -33,7 +33,7 @@ export function themeSwitch() {
       const color = style
         .getPropertyValue(isLight ? "--paper-bg" : "--ink-bg")
         .trim();
-      themeMeta.setAttribute("content", color || (isLight ? "#ece8e1" : "#201e1b"));
+      themeMeta.setAttribute("content", color || (isLight ? "#f1ecf1" : "#17131c"));
     }
   }
 }

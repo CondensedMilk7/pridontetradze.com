@@ -1,36 +1,38 @@
 /*
  * Design tokens — the single source of truth for the visual system.
  *
- * "Quiet and techy": a warm ink/paper palette, one warm sans (Hanken Grotesk),
- * one mono (DM Mono), and a muted accent trio (green / blue / plum).
+ * "Aubergine dusk": a violet-tinted ink/paper palette, one warm sans (Hanken
+ * Grotesk), one mono (DM Mono), and an accent trio (apricot / lilac / cyan).
  *
  * Dark ("ink") is the default theme; `:root.light` (html.light) swaps to "paper".
  * The active accent is chosen per page/category via a `theme-*` class on <body>.
+ * Slot names below (green/blue/plum) are historical: they map to the three
+ * category accents (tech/academic/personal), not literal hues.
  */
 
 :root {
   /* ---- Raw palette ------------------------------------------------------ */
   /* Ink — dark mode */
-  --ink-bg: #201e1b;
-  --ink-panel: #29251e;
-  --ink-fg: #e9e4da;
-  --ink-muted: #9d968a;
+  --ink-bg: #17131c;
+  --ink-panel: #1f1826;
+  --ink-fg: #ece6f1;
+  --ink-muted: #a196aa;
 
   /* Paper — light mode */
-  --paper-bg: #ece8e1;
-  --paper-panel: #f4f1ea;
-  --paper-fg: #26231d;
-  --paper-muted: #6f685c;
+  --paper-bg: #f1ecf1;
+  --paper-panel: #faf6fa;
+  --paper-fg: #221a29;
+  --paper-muted: #6c6274;
 
-  /* Accent trio — base (used as-is in light mode) */
-  --green-base: #4f7a5c;
-  --blue-base: #4f628f;
-  --plum-base: #7d5480;
+  /* Accent trio — base (used as-is in light mode) [apricot / lilac / cyan] */
+  --green-base: #a45f27;
+  --blue-base: #7b4fa0;
+  --plum-base: #1f7d86;
 
   /* Accent trio — lightened for legibility on ink */
-  --green-lift: #8dbb9b;
-  --blue-lift: #97aad8;
-  --plum-lift: #bd97c5;
+  --green-lift: #e6a878;
+  --blue-lift: #c39fe0;
+  --plum-lift: #79c6cf;
 
   /* ---- Semantic tokens (dark / ink is the default) --------------------- */
   --bg: var(--ink-bg);
@@ -39,8 +41,8 @@
   --muted: var(--ink-muted);
 
   /* Hairline rules and panel borders derive from the foreground ink */
-  --rule: rgb(233 228 218 / 0.1);
-  --rule-strong: rgb(233 228 218 / 0.16);
+  --rule: rgb(236 230 241 / 0.1);
+  --rule-strong: rgb(236 230 241 / 0.16);
 
   /* Mode-adjusted accents */
   --green: var(--green-lift);
@@ -53,15 +55,15 @@
 
   /* ---- Syntax highlighting ------------------------------------------- */
   /* Tuned for WCAG AA (>=4.5:1) on --panel; see highlight-theme.css. */
-  --syn-comment: #a1978a;
-  --syn-keyword: #e5a8cb;
-  --syn-function: #97b6ea;
-  --syn-string: #a2cb9d;
-  --syn-number: #e8b083;
-  --syn-class: #dcc47e;
-  --syn-builtin: #8bccc3;
-  --syn-property: #e39d92;
-  --syn-punct: #b3a999;
+  --syn-comment: #8c7f96;
+  --syn-keyword: #c39fe0;
+  --syn-function: #79c6cf;
+  --syn-string: #b7cf98;
+  --syn-number: #e6a878;
+  --syn-class: #e0c06f;
+  --syn-builtin: #8fb4e6;
+  --syn-property: #e69bb0;
+  --syn-punct: #a196aa;
 
   /* ---- Typography ------------------------------------------------------ */
   --font-sans: "Hanken Grotesk", "Noto Sans Georgian", system-ui, -apple-system, sans-serif;
@@ -109,8 +111,8 @@
   --fg: var(--paper-fg);
   --muted: var(--paper-muted);
 
-  --rule: rgb(38 35 29 / 0.12);
-  --rule-strong: rgb(38 35 29 / 0.16);
+  --rule: rgb(34 26 41 / 0.12);
+  --rule-strong: rgb(34 26 41 / 0.16);
 
   --green: var(--green-base);
   --blue: var(--blue-base);
@@ -119,15 +121,15 @@
   --accent-contrast: var(--paper-bg);
 
   /* Syntax highlighting — darker variants for AA contrast on paper --panel. */
-  --syn-comment: #6f6658;
-  --syn-keyword: #9c3a72;
-  --syn-function: #3a5a9c;
-  --syn-string: #35704a;
-  --syn-number: #a1571f;
-  --syn-class: #7e6212;
-  --syn-builtin: #226f68;
-  --syn-property: #a8402f;
-  --syn-punct: #6b6252;
+  --syn-comment: #6c6274;
+  --syn-keyword: #7b4fa0;
+  --syn-function: #1f7d86;
+  --syn-string: #4a6d2f;
+  --syn-number: #a45f27;
+  --syn-class: #7a5f12;
+  --syn-builtin: #3a5a9c;
+  --syn-property: #a1476a;
+  --syn-punct: #665d6e;
 
   color-scheme: light;
 }

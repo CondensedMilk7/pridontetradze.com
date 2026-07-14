@@ -14,5 +14,6 @@
       {{ content | safe }}
     </main>
     {% include "footer.njk" %}
+    {% if env.paletteLab %}{% include "palette-switcher.njk" %}{% endif %}
   </body>
 </html>

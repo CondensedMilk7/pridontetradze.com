@@ -16,7 +16,10 @@ console.log(linksPlugin);
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets");
-  eleventyConfig.addPassthroughCopy("./src/scripts");
+  // Only the scripts loaded via <script src> need copying. main.js, theme/, and
+  // palette/ are inlined (bundled by inlineJs from source).
+  eleventyConfig.addPassthroughCopy({ "src/scripts/cats.js": "scripts/cats.js" });
+  eleventyConfig.addPassthroughCopy({ "src/scripts/music.js": "scripts/music.js" });
 
   // CSS is inlined into <head> (minified) rather than shipped as render-blocking
   // <link> stylesheets — see head.njk. The filter reads each sheet from

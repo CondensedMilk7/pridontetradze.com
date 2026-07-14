@@ -1,0 +1,55 @@
+{# Dev-only palette lab switcher. Included only when env.paletteLab (see base.njk).
+   Buttons carry their data-palette value; the script (scripts/palette/index.js)
+   applies it to <html>, persists it, and keeps aria-pressed in sync. The dots
+   preview each palette's accent trio (dark-mode lift colors). #}
+<div class="palette-lab" role="group" aria-label="Palette lab">
+  <p class="palette-lab__title">Palette lab</p>
+  <div class="palette-lab__list">
+    <button class="palette-lab__btn" type="button" data-palette="" aria-pressed="true">Current</button>
+
+    <button class="palette-lab__btn" type="button" data-palette="petrol" aria-pressed="false">
+      Petrol
+      <span class="palette-lab__dots" aria-hidden="true"><i style="background:#d3a24e"></i><i style="background:#58b8ab"></i><i style="background:#e0868f"></i></span>
+    </button>
+
+    <button class="palette-lab__btn" type="button" data-palette="aubergine" aria-pressed="false">
+      Aubergine
+      <span class="palette-lab__dots" aria-hidden="true"><i style="background:#e6a878"></i><i style="background:#c39fe0"></i><i style="background:#79c6cf"></i></span>
+    </button>
+
+    <button class="palette-lab__btn" type="button" data-palette="oxblood" aria-pressed="false">
+      Oxblood
+      <span class="palette-lab__dots" aria-hidden="true"><i style="background:#e0977a"></i><i style="background:#86bda0"></i><i style="background:#d9bb6b"></i></span>
+    </button>
+
+    <button class="palette-lab__btn" type="button" data-palette="slate" aria-pressed="false">
+      Slate
+      <span class="palette-lab__dots" aria-hidden="true"><i style="background:#c6d264"></i><i style="background:#86b6e8"></i><i style="background:#dd9ac8"></i></span>
+    </button>
+
+    <button class="palette-lab__btn" type="button" data-palette="nocturne" aria-pressed="false">
+      Nocturne
+      <span class="palette-lab__dots" aria-hidden="true"><i style="background:#e0b45e"></i><i style="background:#6fc7d0"></i><i style="background:#e590aa"></i></span>
+    </button>
+
+    <button class="palette-lab__btn" type="button" data-palette="matcha" aria-pressed="false">
+      Matcha
+      <span class="palette-lab__dots" aria-hidden="true"><i style="background:#e0a35e"></i><i style="background:#6bbcae"></i><i style="background:#c79fce"></i></span>
+    </button>
+
+    <button class="palette-lab__btn" type="button" data-palette="heather" aria-pressed="false">
+      Heather
+      <span class="palette-lab__dots" aria-hidden="true"><i style="background:#6cc0b6"></i><i style="background:#e0937a"></i><i style="background:#dab868"></i></span>
+    </button>
+
+    <button class="palette-lab__btn" type="button" data-palette="ember" aria-pressed="false">
+      Ember
+      <span class="palette-lab__dots" aria-hidden="true"><i style="background:#e8955f"></i><i style="background:#63c1bd"></i><i style="background:#a99ae8"></i></span>
+    </button>
+
+    <button class="palette-lab__btn" type="button" data-palette="sandstone" aria-pressed="false">
+      Sandstone
+      <span class="palette-lab__dots" aria-hidden="true"><i style="background:#9dbf6e"></i><i style="background:#7cb0e6"></i><i style="background:#e0917a"></i></span>
+    </button>
+  </div>
+</div>

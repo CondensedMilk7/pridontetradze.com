@@ -29,6 +29,12 @@
   {# --- Design tokens + base (always), inlined + minified to avoid render-blocking requests --- #}
   <style>{{ "tokens.css" | inlineCss | safe }}{{ "main.css" | inlineCss | safe }}</style>
 
+  {# --- Palette lab (local only, PALETTE_LAB=1): alt palettes + pre-paint switch script --- #}
+  {% if env.paletteLab %}
+    <style>{{ "palette-lab.css" | inlineCss | safe }}</style>
+    <script>{{ "palette/index.js" | inlineJs | safe }}</script>
+  {% endif %}
+
   {# --- Page-specific styles (inlined) --- #}
   {% if page.url === "/" %}
     <style>{{ "elements/home.css" | inlineCss | safe }}</style>
@@ -57,7 +63,6 @@
   <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 
   <script>{{ "main.js" | inlineJs | safe }}</script>
 
@@ -65,6 +70,6 @@
   <meta property="og:image" content="{{ image }}">
   <meta property="og:description" content="{{ description }}">
   <meta name="description" content="{{ description }}">
-  <meta name="theme-color" content="#201e1b">
+  <meta name="theme-color" content="#17131c">
   <title>{{ title }} {% if title %} | {% endif %} Pridon Tetradze</title>
 </head>

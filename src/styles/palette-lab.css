@@ -1,0 +1,500 @@
+/*
+ * Palette lab (dev-only) — alternative color palettes + the switcher UI.
+ *
+ * Inlined ONLY when PALETTE_LAB=1 (see head.njk). Each palette overrides just the
+ * raw tokens from tokens.css (--ink-*, --paper-*, --*-base, --*-lift) plus the
+ * per-theme --syn-* tokens; every semantic token (--bg, --panel, --fg, --accent…)
+ * cascades from those, so nothing downstream needs to change. Selected via a
+ * `data-palette` attribute on <html>; absent attribute = the default palette.
+ *
+ * Slot names (green/blue/plum) are kept from tokens.css — they map to the three
+ * category accents (tech/academic/personal). A palette may put e.g. brass in the
+ * "green" slot: the name is a slot, not a literal color.
+ *
+ * `*-base`  = light-mode accent (used on paper).
+ * `*-lift`  = dark-mode accent  (lightened for ink).
+ *
+ * Light-mode syntax uses `:root.light[data-palette]` (specificity 0,3,0) so it
+ * beats both the base `:root.light` block and the palette's own dark block. This
+ * file is inlined after tokens.css so its raw-var overrides win.
+ */
+
+/* ====================================================================== */
+/* Petrol & Brass — cool teal-slate ground, warm brass primary            */
+/* ====================================================================== */
+:root[data-palette="petrol"] {
+  --ink-bg: #12171a;
+  --ink-panel: #1a2126;
+  --ink-fg: #e8ede9;
+  --ink-muted: #8ca09a;
+
+  --paper-bg: #ecefe9;
+  --paper-panel: #f6f8f3;
+  --paper-fg: #17201f;
+  --paper-muted: #5c6b66;
+
+  --green-base: #8a6410; /* brass  */
+  --blue-base: #1f7d72; /* teal   */
+  --plum-base: #b24d57; /* coral  */
+
+  --green-lift: #d3a24e;
+  --blue-lift: #58b8ab;
+  --plum-lift: #e0868f;
+
+  /* dark syntax */
+  --syn-comment: #7f948e;
+  --syn-keyword: #e0868f;
+  --syn-function: #6fc0d6;
+  --syn-string: #86bda0;
+  --syn-number: #d3a24e;
+  --syn-class: #d9c07e;
+  --syn-builtin: #58b8ab;
+  --syn-property: #e0a07a;
+  --syn-punct: #9aa8a2;
+}
+:root.light[data-palette="petrol"] {
+  --syn-comment: #5c6b66;
+  --syn-keyword: #b24d57;
+  --syn-function: #1f6f86;
+  --syn-string: #2f6f57;
+  --syn-number: #8a6410;
+  --syn-class: #7a5f12;
+  --syn-builtin: #1f7d72;
+  --syn-property: #a15a2a;
+  --syn-punct: #56635e;
+}
+
+/* ====================================================================== */
+/* Aubergine Dusk — violet-tinted ink, apricot / lilac / cyan             */
+/* ====================================================================== */
+:root[data-palette="aubergine"] {
+  --ink-bg: #17131c;
+  --ink-panel: #1f1826;
+  --ink-fg: #ece6f1;
+  --ink-muted: #a196aa;
+
+  --paper-bg: #f1ecf1;
+  --paper-panel: #faf6fa;
+  --paper-fg: #221a29;
+  --paper-muted: #6c6274;
+
+  --green-base: #a45f27; /* apricot */
+  --blue-base: #7b4fa0; /* lilac   */
+  --plum-base: #1f7d86; /* cyan    */
+
+  --green-lift: #e6a878;
+  --blue-lift: #c39fe0;
+  --plum-lift: #79c6cf;
+
+  /* dark syntax */
+  --syn-comment: #8c7f96;
+  --syn-keyword: #c39fe0;
+  --syn-function: #79c6cf;
+  --syn-string: #b7cf98;
+  --syn-number: #e6a878;
+  --syn-class: #e0c06f;
+  --syn-builtin: #8fb4e6;
+  --syn-property: #e69bb0;
+  --syn-punct: #a196aa;
+}
+:root.light[data-palette="aubergine"] {
+  --syn-comment: #6c6274;
+  --syn-keyword: #7b4fa0;
+  --syn-function: #1f7d86;
+  --syn-string: #4a6d2f;
+  --syn-number: #a45f27;
+  --syn-class: #7a5f12;
+  --syn-builtin: #3a5a9c;
+  --syn-property: #a1476a;
+  --syn-punct: #665d6e;
+}
+
+/* ====================================================================== */
+/* Oxblood Editorial — warm wine ink + cream, terracotta / teal / mustard */
+/* ====================================================================== */
+:root[data-palette="oxblood"] {
+  --ink-bg: #1c1513;
+  --ink-panel: #251b18;
+  --ink-fg: #efe6de;
+  --ink-muted: #a8968c;
+
+  --paper-bg: #efe9df;
+  --paper-panel: #f8f3ea;
+  --paper-fg: #241a15;
+  --paper-muted: #6f6155;
+
+  --green-base: #b5502f; /* terracotta */
+  --blue-base: #3f7d5c; /* teal-green */
+  --plum-base: #8a6a12; /* mustard    */
+
+  --green-lift: #e0977a;
+  --blue-lift: #86bda0;
+  --plum-lift: #d9bb6b;
+
+  /* dark syntax */
+  --syn-comment: #a08b7f;
+  --syn-keyword: #e0977a;
+  --syn-function: #86bda0;
+  --syn-string: #b7c98f;
+  --syn-number: #d9bb6b;
+  --syn-class: #e0c07a;
+  --syn-builtin: #86c2b4;
+  --syn-property: #e6a1a0;
+  --syn-punct: #b0a094;
+}
+:root.light[data-palette="oxblood"] {
+  --syn-comment: #6f6155;
+  --syn-keyword: #b5502f;
+  --syn-function: #3f7d5c;
+  --syn-string: #4d6a2a;
+  --syn-number: #8a6a12;
+  --syn-class: #7a5c12;
+  --syn-builtin: #23736a;
+  --syn-property: #a8402f;
+  --syn-punct: #66594d;
+}
+
+/* ====================================================================== */
+/* Slate & Citron — cool neutral ground, electric citron primary          */
+/* ====================================================================== */
+:root[data-palette="slate"] {
+  --ink-bg: #16181c;
+  --ink-panel: #1d2027;
+  --ink-fg: #e7e9ee;
+  --ink-muted: #929aa8;
+
+  --paper-bg: #eceef2;
+  --paper-panel: #f6f7fa;
+  --paper-fg: #191c22;
+  --paper-muted: #5b6472;
+
+  --green-base: #6f7a16; /* citron / olive */
+  --blue-base: #3a63a0; /* sky            */
+  --plum-base: #a1478a; /* magenta        */
+
+  --green-lift: #c6d264;
+  --blue-lift: #86b6e8;
+  --plum-lift: #dd9ac8;
+
+  /* dark syntax */
+  --syn-comment: #8891a0;
+  --syn-keyword: #dd9ac8;
+  --syn-function: #86b6e8;
+  --syn-string: #b7d17a;
+  --syn-number: #e0b06a;
+  --syn-class: #d9c47e;
+  --syn-builtin: #6fc6bd;
+  --syn-property: #e59aa2;
+  --syn-punct: #99a1b0;
+}
+:root.light[data-palette="slate"] {
+  --syn-comment: #5b6472;
+  --syn-keyword: #a1478a;
+  --syn-function: #3a63a0;
+  --syn-string: #566d1f;
+  --syn-number: #8a6410;
+  --syn-class: #7a5f12;
+  --syn-builtin: #1f7d72;
+  --syn-property: #b0495a;
+  --syn-punct: #545d6b;
+}
+
+/* ====================================================================== */
+/* Nocturne — deep indigo-navy ground, gold / aqua / rose                 */
+/* ====================================================================== */
+:root[data-palette="nocturne"] {
+  --ink-bg: #14161f;
+  --ink-panel: #1b1f2c;
+  --ink-fg: #e7e8f0;
+  --ink-muted: #969bb0;
+
+  --paper-bg: #ecebf2;
+  --paper-panel: #f5f4fa;
+  --paper-fg: #191a26;
+  --paper-muted: #5f6273;
+
+  --green-base: #8a6510; /* gold */
+  --blue-base: #1f7480; /* aqua */
+  --plum-base: #a94668; /* rose */
+
+  --green-lift: #e0b45e;
+  --blue-lift: #6fc7d0;
+  --plum-lift: #e590aa;
+
+  /* dark syntax */
+  --syn-comment: #8489a0;
+  --syn-keyword: #e590aa;
+  --syn-function: #7fb0ee;
+  --syn-string: #9ccf9a;
+  --syn-number: #e0b45e;
+  --syn-class: #d9c47e;
+  --syn-builtin: #6fc7d0;
+  --syn-property: #e6a488;
+  --syn-punct: #9498ac;
+}
+:root.light[data-palette="nocturne"] {
+  --syn-comment: #5f6273;
+  --syn-keyword: #a94668;
+  --syn-function: #3a5ca8;
+  --syn-string: #35704a;
+  --syn-number: #8a6510;
+  --syn-class: #7a5f12;
+  --syn-builtin: #1f7480;
+  --syn-property: #a85a34;
+  --syn-punct: #565a6c;
+}
+
+/* ====================================================================== */
+/* Matcha — deep pine/olive ground + parchment, burnt-orange / teal / plum */
+/* ====================================================================== */
+:root[data-palette="matcha"] {
+  --ink-bg: #14180f;
+  --ink-panel: #1b2114;
+  --ink-fg: #e8ecdd;
+  --ink-muted: #9aa389;
+
+  --paper-bg: #eaece0;
+  --paper-panel: #f4f6ea;
+  --paper-fg: #1a1f12;
+  --paper-muted: #5f6650;
+
+  --green-base: #9a5a1a; /* burnt orange */
+  --blue-base: #1f7168; /* teal        */
+  --plum-base: #7d4f86; /* plum        */
+
+  --green-lift: #e0a35e;
+  --blue-lift: #6bbcae;
+  --plum-lift: #c79fce;
+
+  /* dark syntax */
+  --syn-comment: #929a80;
+  --syn-keyword: #d98f6f;
+  --syn-function: #9db8e0;
+  --syn-string: #b8cf8f;
+  --syn-number: #e0b45e;
+  --syn-class: #d9c47e;
+  --syn-builtin: #6bbcae;
+  --syn-property: #e0a35e;
+  --syn-punct: #9aa389;
+}
+:root.light[data-palette="matcha"] {
+  --syn-comment: #5f6650;
+  --syn-keyword: #9a5a1a;
+  --syn-function: #3a5ca0;
+  --syn-string: #4d6a2a;
+  --syn-number: #7a5c12;
+  --syn-class: #6f5a12;
+  --syn-builtin: #1f7168;
+  --syn-property: #a8532a;
+  --syn-punct: #58604a;
+}
+
+/* ====================================================================== */
+/* Heather — warm taupe-mauve neutrals, teal / rust / ochre               */
+/* ====================================================================== */
+:root[data-palette="heather"] {
+  --ink-bg: #1b1719;
+  --ink-panel: #241e21;
+  --ink-fg: #ece5e7;
+  --ink-muted: #a4979b;
+
+  --paper-bg: #ece5e8;
+  --paper-panel: #f6f0f2;
+  --paper-fg: #241c1f;
+  --paper-muted: #6d6165;
+
+  --green-base: #1f7570; /* teal  */
+  --blue-base: #b0512f; /* rust  */
+  --plum-base: #8a6710; /* ochre */
+
+  --green-lift: #6cc0b6;
+  --blue-lift: #e0937a;
+  --plum-lift: #dab868;
+
+  /* dark syntax */
+  --syn-comment: #9c8f93;
+  --syn-keyword: #e0937a;
+  --syn-function: #86bdd0;
+  --syn-string: #a8cb9d;
+  --syn-number: #dab868;
+  --syn-class: #dcc47e;
+  --syn-builtin: #6cc0b6;
+  --syn-property: #e0a0b0;
+  --syn-punct: #a4979b;
+}
+:root.light[data-palette="heather"] {
+  --syn-comment: #6d6165;
+  --syn-keyword: #b0512f;
+  --syn-function: #2f6f86;
+  --syn-string: #35704a;
+  --syn-number: #8a6710;
+  --syn-class: #7a5f12;
+  --syn-builtin: #1f7570;
+  --syn-property: #a8467a;
+  --syn-punct: #635a5d;
+}
+
+/* ====================================================================== */
+/* Ember — neutral charcoal + bone, fiery ember / teal / violet (techy)   */
+/* ====================================================================== */
+:root[data-palette="ember"] {
+  --ink-bg: #17161a;
+  --ink-panel: #201f24;
+  --ink-fg: #eae7e4;
+  --ink-muted: #9b9799;
+
+  --paper-bg: #eeece8;
+  --paper-panel: #f7f5f2;
+  --paper-fg: #1c1a18;
+  --paper-muted: #66625f;
+
+  --green-base: #b5501f; /* ember  */
+  --blue-base: #1f7574; /* teal   */
+  --plum-base: #6a51c0; /* violet */
+
+  --green-lift: #e8955f;
+  --blue-lift: #63c1bd;
+  --plum-lift: #a99ae8;
+
+  /* dark syntax */
+  --syn-comment: #948f92;
+  --syn-keyword: #e8955f;
+  --syn-function: #86b4e8;
+  --syn-string: #9fcf97;
+  --syn-number: #e0b45e;
+  --syn-class: #d9c47e;
+  --syn-builtin: #63c1bd;
+  --syn-property: #cfa0e8;
+  --syn-punct: #9b9799;
+}
+:root.light[data-palette="ember"] {
+  --syn-comment: #66625f;
+  --syn-keyword: #b5501f;
+  --syn-function: #3a5ca8;
+  --syn-string: #35704a;
+  --syn-number: #8a6410;
+  --syn-class: #7a5f12;
+  --syn-builtin: #1f7574;
+  --syn-property: #7a4fc0;
+  --syn-punct: #605c59;
+}
+
+/* ====================================================================== */
+/* Sandstone — warm sand + umber ground, cactus / sky / clay              */
+/* ====================================================================== */
+:root[data-palette="sandstone"] {
+  --ink-bg: #1c1813;
+  --ink-panel: #251f18;
+  --ink-fg: #efe7da;
+  --ink-muted: #ab9d89;
+
+  --paper-bg: #ede4d3;
+  --paper-panel: #f6efe1;
+  --paper-fg: #241d13;
+  --paper-muted: #6f6350;
+
+  --green-base: #4f7038; /* cactus */
+  --blue-base: #2f6296; /* sky    */
+  --plum-base: #b04d33; /* clay   */
+
+  --green-lift: #9dbf6e;
+  --blue-lift: #7cb0e6;
+  --plum-lift: #e0917a;
+
+  /* dark syntax */
+  --syn-comment: #a3957f;
+  --syn-keyword: #e0917a;
+  --syn-function: #7cb0e6;
+  --syn-string: #b3cb84;
+  --syn-number: #e0b45e;
+  --syn-class: #d9c07a;
+  --syn-builtin: #7cc0b0;
+  --syn-property: #e0a86e;
+  --syn-punct: #ab9d89;
+}
+:root.light[data-palette="sandstone"] {
+  --syn-comment: #6f6350;
+  --syn-keyword: #b04d33;
+  --syn-function: #2f6296;
+  --syn-string: #4d6a2a;
+  --syn-number: #8a6410;
+  --syn-class: #7a5c12;
+  --syn-builtin: #1f7168;
+  --syn-property: #a8532a;
+  --syn-punct: #645843;
+}
+
+/* ====================================================================== */
+/* Switcher UI                                                            */
+/* ====================================================================== */
+.palette-lab {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+  max-width: 15rem;
+  padding: 0.7rem 0.8rem;
+  background: var(--panel);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-card);
+  box-shadow: 0 8px 28px rgb(0 0 0 / 0.28);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: var(--tracking-mono);
+}
+
+.palette-lab__title {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-kicker);
+  font-size: 0.6rem;
+}
+
+.palette-lab__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.palette-lab__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  appearance: none;
+  cursor: pointer;
+  padding: 0.28rem 0.6rem;
+  font: inherit;
+  color: var(--fg);
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+.palette-lab__btn:hover {
+  border-color: var(--accent);
+}
+.palette-lab__btn[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-color: var(--accent);
+}
+
+.palette-lab__dots {
+  display: inline-flex;
+  gap: 2px;
+}
+.palette-lab__dots i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+  .palette-lab {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    max-width: none;
+  }
+}

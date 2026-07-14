@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
+    "lab": "PALETTE_LAB=1 eleventy --serve",
     "build": "eleventy"
   },
   "author": "",
