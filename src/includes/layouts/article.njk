@@ -27,5 +27,22 @@ layout: "base.njk"
     </section>
 
     {{ content | articleLedger | safe }}
+
+    {% if "academic" in tags %}
+      <section class="section article-cite">
+        <div class="section__index">
+          <p class="section__eyebrow" aria-hidden="true">cite this</p>
+        </div>
+        <div class="section__body">
+          <div class="citation-box">
+            <p>
+              {{ author | citeAuthor }} ({{ page.date | citeYear }}).
+              <strong>{{ title }}</strong>. pridontetradze.com. Retrieved from
+              {{ page.url | absoluteUrl(site.url) }}
+            </p>
+          </div>
+        </div>
+      </section>
+    {% endif %}
   </article>
 </div>

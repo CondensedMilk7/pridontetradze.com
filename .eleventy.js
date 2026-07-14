@@ -95,6 +95,24 @@ module.exports = function (eleventyConfig) {
     /[Ⴀ-ჿᲐ-Ჿ]/.test(String(str || "")),
   );
 
+  // "Pridon Tetradze" -> "Tetradze, P." for the APA-style citation box.
+  eleventyConfig.addFilter("citeAuthor", (name) => {
+    const parts = String(name || "")
+      .trim()
+      .split(/\s+/);
+    if (parts.length < 2) return name;
+    const last = parts[parts.length - 1];
+    const initials = parts
+      .slice(0, -1)
+      .map((p) => p[0].toUpperCase() + ".")
+      .join(" ");
+    return `${last}, ${initials}`;
+  });
+
+  eleventyConfig.addFilter("citeYear", (dateObj) =>
+    DateTime.fromJSDate(dateObj).year,
+  );
+
   // The post's category tag (tech | academic | personal), ignoring "post".
   eleventyConfig.addFilter("category", (tags) => {
     const list = tags || [];

@@ -9,7 +9,6 @@
   letter-spacing: var(--tracking-mono);
   line-height: 1.6;
   color: var(--muted);
-  text-transform: lowercase;
   margin: 0;
 }
 
@@ -214,7 +213,7 @@
   background: var(--panel);
   padding: 1.25rem 1.5rem;
   margin: 2rem 0;
-  max-width: 34rem;
+  max-width: 44rem;
 }
 
 .table-of-contents .toc-title {
@@ -283,6 +282,26 @@
 
 .bibliography a,
 .csl-entry a {
+  color: var(--accent);
+}
+
+/* ---- Cite this ---- */
+.citation-box {
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-card);
+  background: var(--panel);
+  padding: 1.25rem 1.5rem;
+  max-width: 44rem;
+}
+
+.citation-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.citation-box a {
   color: var(--accent);
 }
 
