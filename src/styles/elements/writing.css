@@ -69,7 +69,7 @@
   color: var(--accent);
 }
 
-@media (max-width: 650px) {
+@media (max-width: 900px) {
   .entry__meta {
     flex-direction: row;
     align-items: center;

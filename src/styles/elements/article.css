@@ -42,7 +42,7 @@
    The heading's grid cell stretches to the full section height, so it travels
    the section's length before the next section pushes it out. Sits just below
    the sticky site header. */
-@media (min-width: 651px) {
+@media (min-width: 901px) {
   .section__heading,
   .section__eyebrow {
     position: sticky;
@@ -286,7 +286,7 @@
   color: var(--accent);
 }
 
-@media (max-width: 650px) {
+@media (max-width: 900px) {
   .article__meta {
     flex-flow: row wrap;
     align-items: baseline;

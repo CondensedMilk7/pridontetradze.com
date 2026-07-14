@@ -576,7 +576,7 @@ code {
 /* ======================================================================= */
 /* Responsive — collapse the ledger to one column                          */
 /* ======================================================================= */
-@media (max-width: 650px) {
+@media (max-width: 900px) {
   html {
     scroll-padding-top: 5rem;
   }
