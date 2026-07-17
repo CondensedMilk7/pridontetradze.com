@@ -73,7 +73,7 @@ image: "/assets/images/cover.jpg"
     <div class="section__index">03 — find me</div>
     <div class="section__body">
       <ul class="findme">
-        <li><a href="mailto:{{ cv.contact.email }}">mail</a></li>
+        <li>{% mailLink cv.contact.email, "mail" %}</li>
         <li><a href="{{ cv.contact.linkedin }}">linkedin</a></li>
         <li><a href="{{ cv.contact.github }}">github</a></li>
       </ul>

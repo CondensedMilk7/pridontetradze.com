@@ -1,0 +1,110 @@
+---
+permalink: "robots.txt"
+eleventyExcludeFromCollections: true
+---
+{#
+# robots.txt — https://pridontetradze.com
+#
+# This file is a request, not a control. Well-behaved crawlers honour it;
+# scrapers, email harvesters and hostile bots ignore it entirely. It is also not
+# a deindexing tool: a Disallow'd URL can still be indexed if something links to
+# it. Pages that must stay out of results carry a `noindex` meta tag instead
+# (see src/includes/partials/head.njk) — which requires them to stay crawlable.
+
+# --- Search engines: full access ---------------------------------------------
+# Scripts and styles are deliberately NOT blocked. Search engines render pages
+# before ranking them; hiding assets makes the site look broken to the renderer.
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+# --- AI training crawlers: opted out -----------------------------------------
+# These collect corpora for model training. Blocked. AI *search* agents are
+# allowed further down, so this site can still be cited in assistant answers.
+#}
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: cohere-training-data-crawler
+Disallow: /
+
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: PanguBot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+{#
+# --- AI search & user-initiated fetches: allowed ------------------------------
+# These retrieve a page to answer a question and cite it, rather than to train.
+# Listed explicitly so they are never caught by a future blanket rule.
+#}
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+Sitemap: {{ "/sitemap.xml" | absoluteUrl(site.url) }}

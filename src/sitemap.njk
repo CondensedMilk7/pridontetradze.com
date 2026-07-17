@@ -1,0 +1,25 @@
+---
+permalink: "sitemap.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{#- Posts and standalone pages, straight from collections.all. The /tags/ pages
+    are skipped here and re-added below: they are paginated output, which lands
+    in collections.all too late for this template to see all of it. -#}
+{%- for item in collections.all %}
+  {%- if item.url and item.url !== "/404.html" and "/tags/" not in item.url %}
+  <url>
+    <loc>{{ item.url | absoluteUrl(site.url) }}</loc>
+    <lastmod>{{ item.date | dateToRfc3339 }}</lastmod>
+  </url>
+  {%- endif %}
+{%- endfor %}
+{#- Tag pages, enumerated from the same list tags.njk paginates over. -#}
+{%- for tag in collections.tagList %}
+  <url>
+    <loc>{{ ["/tags/", tag, "/"] | join | absoluteUrl(site.url) }}</loc>
+    <lastmod>{{ collections[tag] | getNewestCollectionItemDate | dateToRfc3339 }}</lastmod>
+  </url>
+{%- endfor %}
+</urlset>

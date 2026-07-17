@@ -12,8 +12,6 @@ const mdHighlightjs = require("markdown-it-highlightjs");
 const linksPlugin = require("./md-plugins/links");
 const bibListPlugin = require("./md-plugins/bib-list.js");
 
-console.log(linksPlugin);
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets");
   // Only the scripts loaded via <script src> need copying. main.js, theme/, and
@@ -62,6 +60,40 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(pluginRss);
+
+  // Renders a mail link whose address is absent from the HTML: the two halves
+  // ship as separate data attributes with no "@" anywhere between them, so the
+  // user@host.tld pattern address harvesters grep for has nothing to match.
+  // main.js joins them into a real mailto: href on load.
+  //
+  // This is friction, not protection — a scraper executing JS still gets the
+  // address. It stops the regex-over-raw-HTML harvesters, which is nearly all
+  // of them. The href is deliberately omitted rather than stubbed: with JS off
+  // the result is inert text, never a link that looks live and goes nowhere.
+  eleventyConfig.addShortcode("mailLink", (email, text) => {
+    const [user, host] = String(email).split("@");
+    return `<a class="mail-link" data-mail-user="${user}" data-mail-host="${host}">${text}</a>`;
+  });
+
+  // The real, author-assigned tags — every tag on a post minus Eleventy's two
+  // automatic collections. `all` and `post` would each render a /tags/*/ page
+  // duplicating /blog/, linked from nowhere.
+  //
+  // tags.njk paginates over this rather than over `collections` directly, and
+  // sitemap.njk reads it to enumerate the tag pages: paginated output lands in
+  // `collections.all` too late for another template to read it reliably (only
+  // the first-written tag page shows up there), so the sitemap derives the URLs
+  // from this list instead of trying to observe the generated pages.
+  const AUTO_COLLECTIONS = new Set(["all", "post"]);
+  eleventyConfig.addCollection("tagList", (collectionApi) => {
+    const tags = new Set();
+    for (const item of collectionApi.getAll()) {
+      for (const tag of item.data.tags || []) {
+        if (!AUTO_COLLECTIONS.has(tag)) tags.add(tag);
+      }
+    }
+    return [...tags].sort();
+  });
 
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);

@@ -66,9 +66,16 @@
 
   <script>{{ "main.js" | inlineJs | safe }}</script>
 
+  <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}">
+
+  {% if page.url === "/404.html" %}
+    <meta name="robots" content="noindex, follow">
+  {% endif %}
+
   <meta property="og:title" content="{{ title }}">
   <meta property="og:image" content="{{ image }}">
   <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}">
   <meta name="description" content="{{ description }}">
   <meta name="theme-color" content="#17131c">
   <title>{{ title }} {% if title %} | {% endif %} Pridon Tetradze</title>

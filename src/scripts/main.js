@@ -3,7 +3,16 @@ import { themeSwitch } from "./theme/index.js";
 document.addEventListener("DOMContentLoaded", () => {
   themeSwitch();
   initMobileMenu();
+  initMailLinks();
 });
+
+function initMailLinks() {
+  document.querySelectorAll(".mail-link").forEach((link) => {
+    const { mailUser, mailHost } = link.dataset;
+    if (!mailUser || !mailHost) return;
+    link.href = `mailto:${mailUser}@${mailHost}`;
+  });
+}
 
 // Full-screen hamburger menu (native <dialog> — focus trap + Escape for free).
 function initMobileMenu() {

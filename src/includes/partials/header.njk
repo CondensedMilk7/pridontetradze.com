@@ -44,7 +44,7 @@
   <div class="mobile-menu__find container">
     <p class="kicker">find me</p>
     <ul class="mobile-menu__links">
-      <li><a href="mailto:{{ cv.contact.email }}">mail</a></li>
+      <li>{% mailLink cv.contact.email, "mail" %}</li>
       <li><a href="{{ cv.contact.linkedin }}">linkedin</a></li>
       <li><a href="{{ cv.contact.github }}">github</a></li>
     </ul>
