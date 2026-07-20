@@ -2,3 +2,4 @@ node_modules
 public
 preview/output
 .DS_Store
+.drafts/
