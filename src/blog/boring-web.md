@@ -75,7 +75,7 @@ I am sure every person has had a similar experience at least to some extent.
 Or perhaps look back into childhood, where you had nothing to do but play a video game,
 where half of the gameplay was just walking.
 There's a reason people remembering fondly such simple moments in their lives.
-Perhaps in childhood the best book you have ever read was the one you picked up because you were bored out of your mind
+Perhaps in adolescence the best book you have ever read was the one you picked up because you were bored out of your mind
 and you had nothing better to do? The book that became a formative factor in the way you think and do things.
 Perhaps I am extremely lucky, but I have experienced all of the above and all of them stemmed from boredom.
 
