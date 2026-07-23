@@ -151,8 +151,7 @@ module.exports = function (eleventyConfig) {
   // The post's category tag (tech | academic | personal), ignoring "post".
   eleventyConfig.addFilter("category", (tags) => {
     const list = tags || [];
-    if (list.includes("academic")) return "academic";
-    if (list.includes("personal")) return "personal";
+    if (list.length > 1) return tags[1];
     return "tech";
   });
 

@@ -1,5 +1,6 @@
 ---
 title: "On Purpose of Prayer"
+date: 2026-07-23
 description: "For the longest time in my life, I misunderstood the purpose of prayer."
 image: "/assets/images/athos.jpg"
 imageAlt: "Father Jerome in Xenophontos Monastery, next to the shelves of skulls of monks"
@@ -85,7 +86,7 @@ As Paul states, you let the Holy Spirit work within you to help you be uplifted 
 
 It is therefore the reason, why Jesus Christ prays to the Father.
 While fully God, being fully human requires willful attempt of aligning with the God's will.
-This is why Jesus prays:
+Jesus declares to the Father, that he wishes the Father's will to be done:
 
 > "My Father, if it is possible, may this cup be taken from me. Yet not as I will, but as you will."
 >
@@ -103,7 +104,7 @@ Namely the analogy he uses to describe prayer:
 >
 > — The Divine Names, Ch. 3.1
 
-God is immutable. He does not move toward us or away for us in response to prayer. He is everywhere.
+God is immutable. He does not move toward us or away from us in response to prayer. He is everywhere.
 Everything is _"of him and to him"_.
 Therefore the prayer is _for the pray-er_.
 It is the rope that allows us to pull ourselves towards God.
